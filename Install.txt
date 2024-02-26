@@ -1,0 +1,82 @@
+npm install bootstrap reactstrap remixicon
+https://react-bootstrap.netlify.app/docs/getting-started/introduction
+https://github.com/Remix-Design/RemixIcon
+https://github.com/Hacker0x01/react-datepicker
+https://imballinst.github.io/react-bs-datatable/storybook/?path=/story/uncontrolled--filter-sort-pagination
+Image Upload
+https://codepen.io/beljems/pen/LYNZYNy
+
+
+
+
+
+
+Liquidity Module
+
+dashboard
+Liquidity Blotter
+Money Market Blotter
+FX Blotter
+Securities Blotter
+
+
+Contacts & Messaging
+Contacts
+Messaging
+Messaging History
+
+Dealing
+   Create Deal 
+   Money Marketing Deal
+   FX Deal
+   Walking Customer FX Deal
+   Securities Deal
+   Repo/Reverse Repo Deal
+
+OTC Order
+Open Market Order
+Incoming Order
+All Deals
+Deal Rollover
+Deal Revision Request
+deal Cancellation Request
+Overdue Deals
+
+
+
+Fund Settlement
+Payable On Maturity
+Receivable on Maturity
+
+
+
+Dealer Profile
+Edit Profile
+Change Password
+
+
+
+Report
+Counterparty Limit Utilixation
+Dealer Limit Utilization
+Daily Deal Report
+Money Market Position
+Daily Average Deal
+Money Market Deal Details
+New L/C
+Import Payment
+Export Proceeds
+Inward Remittance
+
+
+Limit
+Lending Limit
+Borrowing Limit
+Dealer Limit
+
+
+Others
+Notice Board
+View All Holiday
+Online User
+All Contacts

@@ -1,0 +1,22 @@
+/*
+------------------
+.form__check__wrap
+------------------ 
+*/
+.form__check__innr{
+    width: 70%;
+    float: left;
+}
+.label__text{
+    float: left;
+    width: 30%;
+}
+.form-check{
+    float: left;
+}
+.label__text label{
+  font-size: 16px;
+  line-height: 1;
+  color: #5B5B98;
+  padding-top: 8px;
+}

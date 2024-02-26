@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background:#f6f6f6 !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/**
+Commons
+*/
+*, *:focus,.btn,.btn:focus{
+	outline: 0!important;
+	text-decoration: none;
+}
+
+a, button, input{
+	outline: 0;
+	border: 0;
+}
+a, a:hover, a:focus, button:hover, button:focus{
+	text-decoration: none;
+	outline: 0;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+  p{
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  a{
+    color: #E63312;
+    text-decoration: underline;
+  }
+  a:hover{
+    text-decoration: none;
+    color: #7D8D98;
+  }
+  strong,b{
+    font-weight: 700;
+  }
+  em,i{
+    font-style: italic;
+  }
+  u{
+    text-decoration: underline;
+  }
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  textarea{   
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      outline: none;    
+  }
+  ::selection {
+    color: #fff;
+    background: #512C36;
+  }
+.reset-list,
+.ulc{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.first:first-child{
+	padding-left: 0;
+	margin-left: 0;
+}
+.last:last-child{
+	padding-right: 0;
+	margin-right: 0;
+}
+img{
+	max-width: 100%;
+	height: auto;
+	border-radius: 0;
+}
+.container{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.prdLR30{
+  padding: 0 30px;
+}
+
+/**
+All heading
+*/
+h1,h2,h3,h4,h5,h6{
+	line-height: 1.2 !important;
+  font-weight: 700 !important;
+  font-family: "Poppins", sans-serif !important;
+  color: #260944;
+}
+h1{
+	font-size: 56px !important;
+}
+h2{  
+	font-size: 48px !important;
+}
+h3{
+	font-size: 40px !important;
+}
+h4{
+	font-size: 36px !important;
+}
+h5{
+	font-size: 24px !important;
+}
+
+/*
+---------------------
+ Main Layout
+--------------------- 
+*/
+.main-layout{
+  margin-left:280px;
+  height: 100vh;
+}
+
+
+
+/*
+---------------------
+ Left Sidebar Css
+--------------------- 
+*/
+.left_sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #09084a;
+  max-width: 280px;
+  width: 100%;
+  z-index: 999;
+}
+.logo{
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+.logo a{
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  max-width: 240px;
+  width: 100%;
+}
+
+
+/*
+---------------------
+New Sidebar Menu
+--------------------- 
+*/
+.navbarMenu h4 {
+  color: #fff;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+.navbarMenu {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  z-index: 9999;
+}
+.navbarMenu > ul {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  max-width: 280px;
+  width: 100%;
+  overflow-y: scroll;
+  padding-top: 280px;
+}
+.navbarMenu > ul::-webkit-scrollbar {
+  width: 2px;
+}
+.navbarMenu ul li a {
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  padding: 18px 30px 18px 50px;
+  position: relative;
+}
+.navbarMenu ul li ul{
+  padding-left: 0;
+}
+.navbarMenu ul li ul li a {
+  padding: 15px 10px 15px 60px;
+}
+.navbarMenu > ul > li > a > i {
+  position: absolute;
+  left: 30px;
+  top: 17px;
+  color: #fff;
+}
+.create__deal a span i,
+.navbarMenu > ul > li > a > span i {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-size: 20px;
+}
+.create__deal a span i{
+  top: 15px !important;
+}
+.create__deal ul li a {
+  padding-left: 80px !important;
+  font-size: 14px !important;
+  color: #aba7a7 !important;
+}
+.navbarMenu ul li a.active,
+.navbarMenu ul li a:hover{
+  background: #fff;
+  color: #000;
+}
+.navbarMenu ul li a.active i,
+.navbarMenu ul li a:hover i{
+  color: #000;
+}
+
+/*
+---------------
+ Avotor
+---------------
+*/
+.avator{
+  padding-left: 30px;
+}
+.avator button.dropdown-toggle {
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.avator button.dropdown-toggle strong{
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 20px;
+  line-height: 1;
+  color:#260944;
+  padding-left: 10px;
+  font-weight: 600;
+}
+.avator button.dropdown-toggle strong i{
+  padding-left: 20px;
+}
+.dropdown-toggle::after{
+  content: none !important;
+}
+.avator img{
+  width: 55px;
+  height: 55px;
+  /* border:5px solid#fff; */
+  border-radius: 40px;
+}
+.avator .dropdown-menu a{
+  padding-left: 30px;
+}
+.avator .dropdown-menu a i {
+  padding-top: 2px;
+  position: absolute;
+  left: 10px;
+  color: #1C3496;
+}
+
+/*
+------------------
+ breadcrumb Css
+------------------ 
+*/
+.breadcrumb__wrap{
+  padding: 20px 0;
+}
+.breadcrumb__wrap ul li {
+  font-size: 14px;
+  line-height: 1;
+  color: #828282;
+  float: left;
+  padding: 0 2px;
+  position: relative;
+}
+.breadcrumb__wrap ul li:last-child{
+  font-weight: 600;
+}
+.breadcrumb__wrap h5{
+  color: #260944 !important;
+  margin: 20px 0 0;
+}
+
+/*
+------------------
+ Common Input Css
+------------------
+*/
+.book__type ul li{
+  padding-bottom: 25px;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+}
+.book__type ul li label{
+  width: 30%;
+  float: left;
+}
+.book__type__fld{
+  width: 70%;
+  float: left;
+}
+.label__text label,
+.book__type ul li label{
+  font-size: 16px;
+  line-height: 1;
+  color: #5B5B98;
+  padding-top: 15px;
+}
+
+.input__field textarea,
+.select__field select,
+.input__field input{
+  width: 100% !important;
+  height: 50px;
+  border: 1px solid#E8E6F8;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  color: #5B5B98;
+  opacity: 1;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.input__field textarea{
+  height: 80px;
+}
+.input__field textarea:focus,
+input:focus{
+  border-color: #12A8EF;
+}
+.select__field select.form-select{
+  background-image:url(../public/images/angle-icon.png);
+  background-size: 15px 8px;
+}
+.form-select:focus{
+  box-shadow: none !important;
+}
+.submit__btn button{
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: #fff;
+  background: #12A8EF;
+  padding: 15px 20px;
+  border-radius: 5px;
+  border: 2px solid#12A8EF;
+}
+.submit__btn button:hover{
+  background: transparent;
+  color: #12A8EF;
+  border-color:#12A8EF;
+}
+
+/* 
+---------------------
+  Radio Button
+--------------------- 
+*/
+.form__check__wrap{
+  padding-bottom: 30px;
+}
+.form-check {
+  float: left;
+  padding-right: 15px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0 !important;
+  padding-left: 25px !important;
+}
+.form-check label {
+  font-size: 16px;
+  line-height: 1;
+  color: #5B5B98;
+  padding: 4px 10px 0;
+}
+.form-check-input {
+  width: 25px !important;
+  height: 25px !important;
+  --bs-form-check-bg: transparent !important;
+  border: 1px solid #605DEC !important;
+}
+.form-check-input:checked {
+  background-color: transparent !important;
+  border-color: #605DEC;
+}
+.form-check-input:checked[type=radio] {
+  --bs-form-check-bg-image: url(../public/images/radio-icon.png) !important;
+  background-size: 12px 12px !important;
+}
+.form-check-input:focus {
+  border-color: #605DEC;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+/*
+--------------
+ Tabs Css
+--------------
+*/
+.tabsWarp{
+  padding-top: 30px;
+}
+.tabsWarp ul {
+  border: 1px solid#BDBDBD;
+  background: #fff;
+  margin-bottom: 0 !important;
+}
+.tabsWarp ul li{
+  width: 33.3333%;
+}
+.tabsWarp ul li button {
+  display: block !important;
+  width: 100% !important;
+  border: none !important;
+  font-size: 20px;
+  line-height: 1;
+  color: #5B5B98;
+  font-weight: 500;
+  padding: 20px 20px;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background: #12A8EF !important;
+  border-radius: 0 !important;
+  color: #fff !important;
+}
+.tab-content{
+  background:#e6f1f6;
+  padding: 20px 20px;
+}
+
+/*
+-----------------------------
+ Common Input & Refresh Btn 
+-----------------------------
+*/
+.input__refresh__btn{
+  text-align: center;
+  padding-top: 10px;
+}
+.input__refresh__btn button{
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  background: #12a8ef;
+  padding: 14px 25px;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+.input__refresh__btn button:last-child{
+  background:#F2994A;
+}
+
+/*
+----------------------
+ Dashboard Css
+----------------------
+*/
+.dashboard__Table__grid{
+  background: #fff;
+  border-radius: 8px;
+  padding-bottom: 2px;
+  margin-bottom: 30px;
+}
+.dashboard__Table__grid h5{
+  margin:0;
+  padding: 15px 0 5px 25px;
+  color: #260944;
+}
+
+/*
+---------------
+ Plus Btn
+--------------- 
+*/
+.add__btn button{
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  border: 2px solid#12A8EF;
+  border-radius: 8px;
+  background: #12A8EF;
+  padding: 13px 15px;
+  float: right;
+}
+.add__btn button i{
+  display: inline-block;
+  vertical-align: baseline;
+  padding-right: 10px;
+  font-size: 20px;
+}
+.add__btn button:hover{
+  background: transparent;
+  color:#12A8EF;
+}
+
+/*
+-----------------------
+messaging__history__date
+----------------------- 
+*/
+.messaging__history__date ul{
+  float: right;
+  margin: 0 -10px 20px;
+}
+.messaging__history__date ul li{
+  float: left;
+  padding: 0 10px;
+}
+.select__field__date select{
+  width: 220px !important;
+  border-radius: 8px;
+}
+.form-select{
+  width: 200px !important;
+}
+
+/*
+----------------------
+ Change Password
+----------------------
+*/
+.edit__profile__wrap,
+.change__password__wrap{
+  background: #fff;
+  padding: 30px 100px 30px 30px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
+}
+.edit__profile__wrap{
+  max-width: 100%;
+}
+.edit__profile__wrap .book__type ul li label,
+.change__password__wrap .book__type ul li label {
+  width: 35%;
+}
+.profile__img,
+.edit__profile__wrap .book__type__fld,
+.change__password__wrap .book__type__fld {
+  width: 65%;
+}
+.profile__img{
+  float: left;
+}
+.edit__profile__wrap h5,
+.change__password__wrap h5{
+  margin-bottom: 30px;
+  color: #260944;
+}
+.change__password__btn button{
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  background: #12A8EF;
+  margin-right: 15px;
+}
+.change__password__btn button:nth-child(2){
+  background: #F2994A;
+}
+

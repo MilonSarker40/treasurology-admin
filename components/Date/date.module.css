@@ -1,0 +1,21 @@
+.date__picher__wrp label{
+    font-size: 16px;
+    line-height: 1;
+    color: #5B5B98;
+    padding-right: 15px;
+}
+.date__picher__wrp input {
+    width: 200px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid#E8E6F8;
+    border-radius: 8px;
+    color: #212121;
+    font-size: 16px;
+    line-height: 1;
+    padding: 10px 10px;
+    background-image: url(/_next/static/media/calendar.cf275e4a.png);
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 165px;
+}
