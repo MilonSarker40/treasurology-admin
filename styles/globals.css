@@ -613,3 +613,203 @@ messaging__history__date
   background: #F2994A;
 }
 
+/*
+-------------------
+ Login Css
+------------------- 
+*/
+.login__sec__wrap{
+  padding-top: 40px;
+  padding-left: 40px !important;
+  padding-bottom: 40px;
+}
+.login__lft{
+  width: 50%;
+  float: left;
+  height: 800px;
+  background: url(../public/images/login-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login__lft img{
+  padding-left: 40px;
+  padding-top: 40px;
+}
+.login__rgt {
+  width: 50%;
+  float: right;
+  padding-left: 80px;
+  padding-top: 100px;
+}
+.login__innr{
+  max-width: 500px;
+  width: 100%;
+}
+.login__dsc{
+  padding-bottom: 30px;
+}
+.login__dsc p{
+  margin-bottom: 0;
+}
+.login__input{
+  margin-bottom: 20px;
+  position: relative;
+}
+.login__input label{
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+  color: #666666;
+  padding-bottom: 15px;
+}
+.login__input input{
+  width: 100%;
+  height: 55px;
+  border: 1px solid#c9c9c9;
+  font-size: 16px;
+  line-height: 1;
+  color: #260944;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+.login__input input:focus{
+  border-color: #12A8EF;
+}
+.login__input i {
+  position: absolute;
+  right: 15px;
+  top: 48px;
+  font-size: 20px;
+  line-height: 1;
+}
+.login__input span{
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 14px;
+  line-height: 1;
+  padding-top: 5px;
+}
+.login__input__btn button{
+  width: 250px;
+  height: 60px;
+  background: #161803;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 32px;
+  margin-bottom: 10px;
+}
+.inputtype-checkbox label a,
+.login__input__btn p a{
+  color: #000;
+}
+.inputtype-checkbox label a:hover,
+.login__input__btn p a:hover{
+  color: #12A8EF;
+}
+
+/*
+-------------------------
+ Input type checkbox Css
+-------------------------
+*/
+/* The container */
+.inputtype-checkbox .container {
+  display: block;
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  color:#83898C;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 22px;
+  text-transform: capitalize;
+  margin:30px 0;
+}
+
+/* Hide the browser's default checkbox */
+.inputtype-checkbox .container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+
+/* Create a custom checkbox */
+.inputtype-checkbox .checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 2px solid #111111;
+  border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+/*.inputtype-checkbox .container:hover input ~ .checkmark {
+background-color: #D34E8E;
+}*/
+/* When the checkbox is checked, add a blue background */
+.inputtype-checkbox .container input:checked ~ .checkmark {
+  background-color: #111111;
+  border: 2px solid #111111;
+}
+.login__captcha .inputtype-checkbox .checkmark{
+  border: 2px solid #34A853;
+}
+.login__captcha .inputtype-checkbox .container input:checked ~ .checkmark {
+  background-color: #34A853;
+  border: 2px solid #34A853;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.inputtype-checkbox .checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the checkmark when checked */
+.inputtype-checkbox .container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.inputtype-checkbox .container .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 8px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.inputtype-checkbox .container:hover .checkmark:after{
+  border-color: #fff !important;
+}
+.login__captcha{
+  padding-bottom: 30px;
+}
+.login__captcha button {
+  border: 1px solid#333333;
+  border-radius: 18px;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login__captcha .container{
+  text-align: left;
+  margin: 0;
+}

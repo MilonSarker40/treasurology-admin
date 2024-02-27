@@ -63,7 +63,7 @@ const Header = ({props}) => {
                                         </DropdownToggle>
                                         <DropdownMenu>
                                             {/* <DropdownItem href='/login'><i class="ri-login-circle-line"></i>Login</DropdownItem> */}
-                                            <DropdownItem onClick={handleClick} href='#'><i class="ri-account-circle-fill"></i>Logout</DropdownItem>
+                                            <DropdownItem onClick={handleClick} href='login'><i class="ri-account-circle-fill"></i>Login</DropdownItem>
                                         </DropdownMenu>
                                     </Dropdown>
                                 </div>

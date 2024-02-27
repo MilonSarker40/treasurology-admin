@@ -77,8 +77,8 @@ const Sidebar = () => {
                 <Link onClick={() => setFundToggle(!fundToggle)} href='#'><i class="ri-file-text-fill"></i>Fund Settlement<span><i class="ri-arrow-down-s-line"></i></span></Link>
                 {fundToggle && (
                   <ul className='clearfix reset-list'>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Payable On Maturity</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Receivable on Maturity</Link></li>
+                    <li><Link href="/payable-maturity" className={asPath==='/payable-maturity' ? 'list active' : 'list'}>Payable On Maturity</Link></li>
+                    <li><Link href="/receivable-maturity" className={asPath==='/receivable-maturity' ? 'list active' : 'list'}>Receivable on Maturity</Link></li>
                   </ul>
                 )}
               </li>
