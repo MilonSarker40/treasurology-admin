@@ -33,7 +33,7 @@ const Sidebar = () => {
                 <Link onClick={() => setBlotterToggle(!blotterToggle)} href='#'><i class="ri-user-line"></i>Liquidity Blotter<span><i class="ri-arrow-down-s-line"></i></span></Link>
                 {blotterToggle && (
                   <ul className='clearfix reset-list'>
-                    <li><Link href="/money-market-deal" className={asPath==='/money-market-deal' ? 'list active' : 'list'}>Money Market Blotter</Link></li>
+                    <li><Link href="/money-market-blotter" className={asPath==='/money-market-blotter' ? 'list active' : 'list'}>Money Market Blotter</Link></li>
                     <li><Link href="/fx-blotter" className={asPath==='/fx-blotter' ? 'list active' : 'list'}>FX Blotter</Link></li>
                     <li><Link href="/securities-blotter" className={asPath==='/securities-blotter' ? 'list active' : 'list'}>Securities Blotter</Link></li>
                   </ul>
@@ -44,7 +44,7 @@ const Sidebar = () => {
                 {contactsToggle && (
                 <ul className='clearfix reset-list'>
                   <li><Link href="/contacts" className={asPath==='/contacts' ? 'list active' : 'list'}>Contacts</Link></li>
-                  <li><Link href="/circle" className={asPath==='/circle' ? 'list active' : 'list'}>Messaging</Link></li>
+                  <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Messaging</Link></li>
                   <li><Link href="/messaging-history" className={asPath==='/messaging-history' ? 'list active' : 'list'}>Messaging History</Link></li>
                 </ul>
                 )}
@@ -58,9 +58,9 @@ const Sidebar = () => {
                       {createToggle &&(
                         <ul className='clearfix reset-list'>
                           <li><Link href="/money-market-deal" className={asPath==='/money-market-deal' ? 'list active' : 'list'}>Money Marketing Deal</Link></li>
-                          <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>FX Deal</Link></li>
-                          <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Walking Customer FX Deal</Link></li>
-                          <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Securities Deal</Link></li>
+                          <li><Link href="/fx-deal" className={asPath==='/fx-deal' ? 'list active' : 'list'}>FX Deal</Link></li>
+                          <li><Link href="/walking-customer-fx-deal" className={asPath==='/walking-customer-fx-deal' ? 'list active' : 'list'}>Walking Customer FX Deal</Link></li>
+                          <li><Link href="/securities-deal" className={asPath==='/securities-deal' ? 'list active' : 'list'}>Securities Deal</Link></li>
                           <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Repo/Reverse Repo Deal</Link></li>
                         </ul>
                       )}
@@ -68,8 +68,11 @@ const Sidebar = () => {
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>OTC Order</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Open Market Order</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Incoming Order</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>All Deals</Link></li>
+                    <li><Link href="/all-deals" className={asPath==='/all-deals' ? 'list active' : 'list'}>All Deals</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Deal Rollover</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Deal Revision Request</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>deal Cancellation Request</Link></li>
+                    <li><Link href="/overdue-deal" className={asPath==='/overdue-deal' ? 'list active' : 'list'}>Overdue Deals</Link></li>
                   </ul>
                 )}
               </li>
@@ -95,16 +98,16 @@ const Sidebar = () => {
                 <Link onClick={() => setReportToggle(!reportToggle)} href='#'><i class="ri-file-text-fill"></i>Report<span><i class="ri-arrow-down-s-line"></i></span></Link>
                 {reportToggle &&(
                   <ul className='clearfix reset-list'>
-                    <li><Link href="/agent-earning" className={asPath==='/agent-earning' ? 'list active' : 'list'}>Counterparty Limit Utilixation</Link></li>
-                    <li><Link href="/agent-due" className={asPath==='/agent-due' ? 'list active' : 'list'}>Dealer Limit Utilization</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Daily Deal Report</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Money Market Position</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Daily Average Deal</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Money Market Deal Details</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>New L/C</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Import Payment</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Export Proceeds</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Inward Remittance</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Counterparty Limit Utilixation</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Dealer Limit Utilization</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Daily Deal Report</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Money Market Position</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Daily Average Deal</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Money Market Deal Details</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>New L/C</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Import Payment</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Export Proceeds</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Inward Remittance</Link></li>
                   </ul>
                 )}
               </li>
@@ -112,9 +115,9 @@ const Sidebar = () => {
                 <Link onClick={() => setLimitToggle(!limitToggle)} href='#'><i class="ri-file-text-fill"></i>Limit<span><i class="ri-arrow-down-s-line"></i></span></Link>
                 {limitToggle &&(
                   <ul className='clearfix reset-list'>
-                    <li><Link href="/agent-earning" className={asPath==='/agent-earning' ? 'list active' : 'list'}>Lending Limit</Link></li>
-                    <li><Link href="/agent-due" className={asPath==='/agent-due' ? 'list active' : 'list'}>Borrowing Limit</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Dealer Limit</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Lending Limit</Link></li>
+                    <li><Link href="/" className={asPath==='/'? 'list active' : 'list'}>Borrowing Limit</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Dealer Limit</Link></li>
                   </ul>
                 )}
               </li>
@@ -122,10 +125,10 @@ const Sidebar = () => {
                 <Link onClick={() => setOthersToggle(!othersToggle)} href='#'><i class="ri-file-text-fill"></i>Others<span><i class="ri-arrow-down-s-line"></i></span></Link>
                 {othersToggle &&(
                   <ul className='clearfix reset-list'>
-                    <li><Link href="/notifications" className={asPath==='/notifications' ? 'list active' : 'list'}>Notice Board</Link></li>
-                    <li><Link href="/agent-due" className={asPath==='/agent-due' ? 'list active' : 'list'}>View All Holiday</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>Online User</Link></li>
-                    <li><Link href="/agent-recharge" className={asPath==='/agent-recharge' ? 'list active' : 'list'}>All Contacts</Link></li>
+                    <li><Link href="/notice-board" className={asPath==='/notice-board' ? 'list active' : 'list'}>Notice Board</Link></li>
+                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>View All Holiday</Link></li>
+                    <li><Link href="/online-user" className={asPath==='/online-user' ? 'list active' : 'list'}>Online User</Link></li>
+                    <li><Link href="/all-contacts" className={asPath==='/all-contacts' ? 'list active' : 'list'}>All Contacts</Link></li>
                   </ul>
                 )}
               </li>

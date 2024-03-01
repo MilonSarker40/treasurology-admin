@@ -451,15 +451,15 @@ input:focus{
 .tabsWarp{
   padding-top: 30px;
 }
-.tabsWarp ul {
+.tabsWarp > ul {
   border: 1px solid#BDBDBD;
   background: #fff;
   margin-bottom: 0 !important;
 }
-.tabsWarp ul li{
+.tabsWarp > ul > li{
   width: 33.3333%;
 }
-.tabsWarp ul li button {
+.tabsWarp > ul > li button {
   display: block !important;
   width: 100% !important;
   border: none !important;
@@ -480,6 +480,22 @@ input:focus{
   padding: 20px 20px;
 }
 
+/*
+-----------------------
+money-market-blotter
+----------------------- 
+*/
+.money__market__blotter__grid ul{
+  margin: 0 -10px;
+}
+.money__market__blotter__grid ul li{
+  float: left;
+  width: 29%;
+  padding: 0 10px;
+}
+.money__market__blotter__grid ul li:last-child{
+  width: 42%;
+}
 /*
 -----------------------------
  Common Input & Refresh Btn 
@@ -552,11 +568,11 @@ messaging__history__date
 */
 .messaging__history__date ul{
   float: right;
-  margin: 0 -10px 20px;
+  margin: 0 -10px 20px !important;
 }
 .messaging__history__date ul li{
   float: left;
-  padding: 0 10px;
+  padding: 0 10px !important;
 }
 .select__field__date select{
   width: 220px !important;
@@ -565,7 +581,9 @@ messaging__history__date
 .form-select{
   width: 200px !important;
 }
-
+.select__field__action select{
+  width: 260px !important;
+}
 /*
 ----------------------
  Change Password
@@ -812,4 +830,30 @@ display: block;
 .login__captcha .container{
   text-align: left;
   margin: 0;
+}
+
+/*
+---------------------
+ All Deals Page
+--------------------- 
+*/
+.all__deals__tabs ul{
+  border-bottom: 0;
+  margin: 0 -8px;
+}
+.all__deals__tabs > ul > li{
+  padding: 0 8px;
+}
+.all__deals__tabs > ul > li button{
+  background: #E1E1E1;
+  color: #000;
+  border-radius: 0 !important;
+}
+.all__deals__tabs > ul > li button:hover{
+  background: #12A8EF;
+  color: #fff;
+}
+.all__deals__tabs .tab-content {
+  background: transparent !important;
+  padding: 0 !important;
 }

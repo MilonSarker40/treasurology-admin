@@ -45,7 +45,7 @@ const Header = ({props}) => {
                                             <Link href='#'><i class="ri-messenger-line"></i></Link>
                                         </li>
                                         <li>
-                                            <Link href='#'><i class="ri-notification-2-line"></i></Link>
+                                            <Link href='notifications'><i class="ri-notification-2-line"></i></Link>
                                         </li>
                                         <li>
                                             <Link href='#'><i class="ri-moon-line"></i></Link>

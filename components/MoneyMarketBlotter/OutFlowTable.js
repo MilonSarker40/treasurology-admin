@@ -19,7 +19,7 @@ const OutFlowTable = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <th>BB Bill <i className="ri-add-box-fill"></i></th>
+                        <th>BB Bill <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -27,7 +27,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Treasury Bill <i className="ri-add-box-fill"></i></th>
+                        <th>Treasury Bill <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -43,7 +43,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Treasury Bond <i className="ri-add-box-fill"></i></th>
+                        <th>Treasury Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -67,7 +67,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Treasury Sukuk <i className="ri-add-box-fill"></i></th>
+                        <th>Treasury Sukuk <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -83,7 +83,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Perpetual  Bond <i className="ri-add-box-fill"></i></th>
+                        <th>Perpetual  Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -91,7 +91,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Subordinate  Bond <i className="ri-add-box-fill"></i></th>
+                        <th>Subordinate  Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -99,7 +99,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Corporate Bond <i className="ri-add-box-fill"></i></th>
+                        <th>Corporate Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -107,7 +107,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Zero Coupon   Bond <i className="ri-add-box-fill"></i></th>
+                        <th>Zero Coupon   Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -115,7 +115,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Others <i className="ri-add-box-fill"></i></th>
+                        <th>Others <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -123,8 +123,8 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <td style={{borderBottom:'0',color:'#27AE60',fontWeight:'600'}}>Total In Flow</td>
-                        <td style={{borderBottom:'0',color:'#27AE60',fontWeight:'600'}}>100,000,000,0000.00</td>
+                        <td style={{borderBottom:'0',color:'#EB5757',fontWeight:'600'}}>Total In Flow</td>
+                        <td style={{borderBottom:'0',color:'#EB5757',fontWeight:'600'}}>99,000,000,0000.00</td>
                     </tr>
                 </tbody>
              </Table>

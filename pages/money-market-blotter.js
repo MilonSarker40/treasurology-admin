@@ -27,37 +27,121 @@ const MoneyMarketBlotter = () => {
                                         </div>
                                     </div>
                                     <div className='row'>
-                                        <div className='col-md-3'>
-                                            <div className={`${Classes.in__flow_table__grid}`}>
-                                                <h5>In Flow</h5>
-                                                <InFlowTable />
-                                                <InputRefreshBtn />
-                                            </div>
-                                        </div>
-                                        <div className='col-md-3'>
-                                            <div className={`${Classes.out__flow_table__grid}`}>
-                                                <h5>In Flow</h5>
-                                                <OutFlowTable />
-                                                <InputRefreshBtn />
-                                            </div>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <div className={`${Classes.deal__buy__table_grid}`}>
-                                                <h6>Todays Deal - Buy</h6>
-                                                <DealBuyTable />
-                                            </div>
-                                            <div className={`${Classes.deal__buy__table_grid}`}>
-                                                <h6>Todays Deal - Sell</h6>
-                                                <DealBuyTable />
+                                        <div className='col-md-12'>
+                                            <div className='money__market__blotter__grid'>
+                                                <ul className='clearfix reset-list'>
+                                                    <li>
+                                                        <div className={`${Classes.in__flow_table__grid}`}>
+                                                            <h5>In Flow</h5>
+                                                            <InFlowTable />
+                                                            <InputRefreshBtn />
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className={`${Classes.out__flow_table__grid}`}>
+                                                            <h5>Out Flow</h5>
+                                                            <OutFlowTable />
+                                                            <InputRefreshBtn />
+                                                        </div> 
+                                                    </li>
+                                                    <li>
+                                                        <div className={`${Classes.deal__buy__table_grid}`}>
+                                                            <h6>Todays Deal - Buy</h6>
+                                                            <DealBuyTable />
+                                                        </div>
+                                                        <div className={`${Classes.deal__buy__table_grid}`}>
+                                                            <h6>Todays Deal - Sell</h6>
+                                                            <DealBuyTable />
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </Tab>
                                 <Tab eventKey="Offshore" title="Offshore Banking Unit (OBU)">
-                                    Tabs 2
+                                    <div className='row'>
+                                        <div className='col-md-4'>
+                                            <ParticularTable />
+                                        </div>
+                                        <div className='col-md-5'>
+                                            <IndicatorTable />
+                                        </div>
+                                    </div>
+                                    <div className='row'>
+                                        <div className='col-md-12'>
+                                            <div className='money__market__blotter__grid'>
+                                                <ul className='clearfix reset-list'>
+                                                    <li>
+                                                        <div className={`${Classes.in__flow_table__grid}`}>
+                                                            <h5>In Flow</h5>
+                                                            <InFlowTable />
+                                                            <InputRefreshBtn />
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className={`${Classes.out__flow_table__grid}`}>
+                                                            <h5>In Flow</h5>
+                                                            <OutFlowTable />
+                                                            <InputRefreshBtn />
+                                                        </div> 
+                                                    </li>
+                                                    <li>
+                                                        <div className={`${Classes.deal__buy__table_grid}`}>
+                                                            <h6>Todays Deal - Buy</h6>
+                                                            <DealBuyTable />
+                                                        </div>
+                                                        <div className={`${Classes.deal__buy__table_grid}`}>
+                                                            <h6>Todays Deal - Sell</h6>
+                                                            <DealBuyTable />
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </Tab>
                                 <Tab eventKey="Islamic" title="Islamic Banking Unit">
-                                    Tabs 3
+                                    <div className='row'>
+                                        <div className='col-md-4'>
+                                            <ParticularTable />
+                                        </div>
+                                        <div className='col-md-5'>
+                                            <IndicatorTable />
+                                        </div>
+                                    </div>
+                                    <div className='row'>
+                                        <div className='col-md-12'>
+                                            <div className='money__market__blotter__grid'>
+                                                <ul className='clearfix reset-list'>
+                                                    <li>
+                                                        <div className={`${Classes.in__flow_table__grid}`}>
+                                                            <h5>In Flow</h5>
+                                                            <InFlowTable />
+                                                            <InputRefreshBtn />
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className={`${Classes.out__flow_table__grid}`}>
+                                                            <h5>In Flow</h5>
+                                                            <OutFlowTable />
+                                                            <InputRefreshBtn />
+                                                        </div> 
+                                                    </li>
+                                                    <li>
+                                                        <div className={`${Classes.deal__buy__table_grid}`}>
+                                                            <h6>Todays Deal - Buy</h6>
+                                                            <DealBuyTable />
+                                                        </div>
+                                                        <div className={`${Classes.deal__buy__table_grid}`}>
+                                                            <h6>Todays Deal - Sell</h6>
+                                                            <DealBuyTable />
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </Tab>
                            </Tabs>
                         </div>
