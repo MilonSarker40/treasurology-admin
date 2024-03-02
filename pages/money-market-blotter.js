@@ -1,13 +1,13 @@
 import React from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import ParticularTable from '../components/SecurityBlotter/ParticularTable';
-import IndicatorTable from '../components/SecurityBlotter/IndicatorTable';
-import DealBuyTable from '../components/SecurityBlotter/DealBuyTable';
-import Classes from '../styles/moneyblotter.module.css';
-import InFlowTable from '../components/SecurityBlotter/InFlowTable';
+import ParticularTable from '../components/MoneyMarketBlotter/ParticularTable';
+import IndicatorTable from '../components/MoneyMarketBlotter/IndicatorTable';
+import DealBuyTable from '../components/MoneyMarketBlotter/DealBuyTable';
+import InFlowTable from '../components/MoneyMarketBlotter/InFlowTable';
 import InputRefreshBtn from '../components/InputRefreshBtn/InputRefreshBtn';
-import OutFlowTable from '../components/SecurityBlotter/OutFlowTable';
+import OutFlowTable from '../components/MoneyMarketBlotter/OutFlowTable';
+import Classes from '../styles/moneyblotter.module.css';
 
 const MoneyMarketBlotter = () => {
     return (
@@ -19,11 +19,15 @@ const MoneyMarketBlotter = () => {
                             <Tabs defaultActiveKey="Domestic" id="uncontrolled-tab-example" className="mb-3">
                                 <Tab eventKey="Domestic" title="Domestic Banking Unit (DBU)">
                                     <div className='row'>
-                                        <div className='col-md-4'>
-                                            <ParticularTable />
-                                        </div>
-                                        <div className='col-md-5'>
-                                            <IndicatorTable />
+                                        <div className='col-md-12'>
+                                            <div className='fx__blotter__wrap'>
+                                                <ul className='clearfix reset-list'>
+                                                    <li></li>
+                                                    <li>
+                                                        <IndicatorTable />
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className='row'>
@@ -32,7 +36,7 @@ const MoneyMarketBlotter = () => {
                                                 <ul className='clearfix reset-list'>
                                                     <li>
                                                         <div className={`${Classes.in__flow_table__grid}`}>
-                                                            <h5>In Flow</h5>
+                                                            <ParticularTable />
                                                             <InFlowTable />
                                                             <InputRefreshBtn />
                                                         </div>

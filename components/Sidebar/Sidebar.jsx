@@ -65,13 +65,13 @@ const Sidebar = () => {
                         </ul>
                       )}
                     </li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>OTC Order</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Open Market Order</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Incoming Order</Link></li>
+                    <li><Link href="/otc-order" className={asPath==='/otc-order' ? 'list active' : 'list'}>OTC Order</Link></li>
+                    <li><Link href="/open-market-order" className={asPath==='/open-market-order' ? 'list active' : 'list'}>Open Market Order</Link></li>
+                    <li><Link href="/incoming-order" className={asPath==='/incoming-order' ? 'list active' : 'list'}>Incoming Order</Link></li>
                     <li><Link href="/all-deals" className={asPath==='/all-deals' ? 'list active' : 'list'}>All Deals</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Deal Rollover</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Deal Revision Request</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>deal Cancellation Request</Link></li>
+                    <li><Link href="/deal-rollover" className={asPath==='/deal-rollover' ? 'list active' : 'list'}>Deal Rollover</Link></li>
+                    <li><Link href="/deal-revision-request" className={asPath==='/deal-revision-request' ? 'list active' : 'list'}>Deal Revision Request</Link></li>
+                    <li><Link href="/deal-cancellation-request" className={asPath==='/deal-cancellation-request' ? 'list active' : 'list'}>deal Cancellation Request</Link></li>
                     <li><Link href="/overdue-deal" className={asPath==='/overdue-deal' ? 'list active' : 'list'}>Overdue Deals</Link></li>
                   </ul>
                 )}
@@ -103,7 +103,7 @@ const Sidebar = () => {
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Daily Deal Report</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Money Market Position</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Daily Average Deal</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Money Market Deal Details</Link></li>
+                    <li><Link href="/money-market-deal-details-report" className={asPath==='/money-market-deal-details-report' ? 'list active' : 'list'}>Money Market Deal Details</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>New L/C</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Import Payment</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Export Proceeds</Link></li>
@@ -115,9 +115,9 @@ const Sidebar = () => {
                 <Link onClick={() => setLimitToggle(!limitToggle)} href='#'><i class="ri-file-text-fill"></i>Limit<span><i class="ri-arrow-down-s-line"></i></span></Link>
                 {limitToggle &&(
                   <ul className='clearfix reset-list'>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Lending Limit</Link></li>
-                    <li><Link href="/" className={asPath==='/'? 'list active' : 'list'}>Borrowing Limit</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Dealer Limit</Link></li>
+                    <li><Link href="/lending-limit" className={asPath==='/lending-limit' ? 'list active' : 'list'}>Lending Limit</Link></li>
+                    <li><Link href="/borrowing-limit" className={asPath==='/borrowing-limit'? 'list active' : 'list'}>Borrowing Limit</Link></li>
+                    <li><Link href="/dealer-limit" className={asPath==='/dealer-limit' ? 'list active' : 'list'}>Dealer Limit</Link></li>
                   </ul>
                 )}
               </li>

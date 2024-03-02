@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import Classes from '../MoneyMarketBlotter/moneyblotter.module.css';
+import Classes from '../../styles/moneyblotter.module.css';
 
 const DealBuyTable = () => {
     return (
@@ -21,7 +21,7 @@ const DealBuyTable = () => {
                 <tr>
                     <td>02</td>
                     <td>Sonali Bank</td>
-                    <td>182 Days</td>
+                    <td>OverNight</td>
                     <td>100000</td>
                     <td>7%</td>
                     <td>22</td>
@@ -30,7 +30,7 @@ const DealBuyTable = () => {
                 <tr>
                     <td>02</td>
                     <td>Dhaka Bank</td>
-                    <td>9 Days</td>
+                    <td>Notice</td>
                     <td>100000</td>
                     <td>7%</td>
                     <td>22</td>
@@ -39,7 +39,7 @@ const DealBuyTable = () => {
                 <tr>
                     <td>02</td>
                     <td>UCBL Bank</td>
-                    <td>2 Year</td>
+                    <td>Term</td>
                     <td>100000</td>
                     <td>7%</td>
                     <td>22</td>
@@ -48,7 +48,7 @@ const DealBuyTable = () => {
                 <tr>
                     <td>02</td>
                     <td>AB Bank</td>
-                    <td>10 Yeas</td>
+                    <td>S/B SWAP</td>
                     <td>100000</td>
                     <td>7%</td>
                     <td>22</td>

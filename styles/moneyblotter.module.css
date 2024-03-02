@@ -1,6 +1,6 @@
-.particular__table table tbody tr:last-child td{
+.particular__table table tbody tr:nth-child(2) td{
     background:#2f80ed;
-    color: #fff;
+    color: #fff !important;
 }
 .indicator__table table thead tr th{
     color: #fff;

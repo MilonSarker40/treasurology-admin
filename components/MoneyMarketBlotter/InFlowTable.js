@@ -1,73 +1,47 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import InFlowTableData from './InFlowTableData';
-import Classes from '../MoneyMarketBlotter/moneyblotter.module.css';
+import Classes from '../../styles/moneyblotter.module.css';
 
 
 
 
 
-const OutFlowTable = () => {
+const InFlowTable = () => {
     return (
         <div className={`${Classes.in__flow__table}`}>
             <Table>
-                <thead>
-                    <tr>
-                        <th>Particular</th>
-                        <th>Amount</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <th>BB Bill <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
+                        <td>FX Forward</td>
+                        <td>100,000,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>SWAP</td>
+                        <td>100,000,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <th>Customer RTGS</th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
-                        <td>14 Days</td>
+                        <td>Robi</td>
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Treasury Bill <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
-                        <th>100,000,000,00000.00</th>
-                    </tr>
-                    <tr>
-                        <td>91 Days</td>
+                        <td>GP</td>
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <td>82 Days</td>
+                        <td>Mrinmoy K</td>
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <td>364 Days</td>
+                        <td>Mrinmoy K</td>
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Treasury Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
-                        <th>100,000,000,00000.00</th>
-                    </tr>
-                    <tr>
-                        <td>2 Year</td>
-                        <td>100,000,000,000.00</td>
-                    </tr>
-                    <tr>
-                        <td>5 Year</td>
-                        <td>100,000,000,000.00</td>
-                    </tr>
-                    <tr>
-                        <td>10 Year</td>
-                        <td>100,000,000,000.00</td>
-                    </tr>
-                    <tr>
-                        <td>15 Year</td>
-                        <td>100,000,000,000.00</td>
-                    </tr>
-                    <tr>
-                        <td>20 Year</td>
-                        <td>100,000,000,000.00</td>
-                    </tr>
-                    <tr>
-                        <th>Treasury Sukuk <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
+                        <th>Customer BB Cheque</th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -83,23 +57,7 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Perpetual  Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
-                        <th>100,000,000,00000.00</th>
-                    </tr>
-                    <tr>
-                        <td>City Bank</td>
-                        <td>100,000,000,000.00</td>
-                    </tr>
-                    <tr>
-                        <th>Subordinate  Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
-                        <th>100,000,000,00000.00</th>
-                    </tr>
-                    <tr>
-                        <td>Dhaka Bank </td>
-                        <td>100,000,000,000.00</td>
-                    </tr>
-                    <tr>
-                        <th>Corporate Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
+                        <th>BEFTN</th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -107,15 +65,35 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Zero Coupon   Bond <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
-                        <th>100,000,000,00000.00</th>
-                    </tr>
-                    <tr>
-                        <td>United Securities</td>
+                        <td>Jamuna Group</td>
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <th>Others <i className="ri-add-box-fill" style={{color:'#EB5757'}}></i></th>
+                        <td>Tapash</td>
+                        <td>100,000,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <th>BACH</th>
+                        <th>100,000,000,00000.00</th>
+                    </tr>
+                    <tr>
+                        <td>High Value</td>
+                        <td>100,000,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>Regular Value</td>
+                        <td>100,000,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>High Value Return</td>
+                        <td>100,000,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>Regular Value Return</td>
+                        <td>100,000,000,000.00</td>
+                    </tr>
+                    <tr>
+                        <th>Others</th>
                         <th>100,000,000,00000.00</th>
                     </tr>
                     <tr>
@@ -123,8 +101,8 @@ const OutFlowTable = () => {
                         <td>100,000,000,000.00</td>
                     </tr>
                     <tr>
-                        <td style={{borderBottom:'0',color:'#EB5757',fontWeight:'600'}}>Total In Flow</td>
-                        <td style={{borderBottom:'0',color:'#EB5757',fontWeight:'600'}}>99,000,000,0000.00</td>
+                        <td style={{borderBottom:'0',color:'#27AE60',fontWeight:'600'}}>Total In Flow</td>
+                        <td style={{borderBottom:'0',color:'#27AE60',fontWeight:'600'}}>100,000,000,0000.00</td>
                     </tr>
                 </tbody>
              </Table>
@@ -132,4 +110,4 @@ const OutFlowTable = () => {
     );
 }
 
-export default OutFlowTable;
+export default InFlowTable;

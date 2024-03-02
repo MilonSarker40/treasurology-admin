@@ -1,6 +1,6 @@
 import React from 'react';
-import Classes from '../MoneyMarketBlotter/moneyblotter.module.css';
 import Table from 'react-bootstrap/Table';
+import Classes from '../../styles/moneyblotter.module.css';
 
 const IndicatorTable = () => {
     return (
@@ -17,15 +17,15 @@ const IndicatorTable = () => {
                 <tbody>
                      <tr>
                         <td>1. Daily - CRR</td>
-                        <td>900.00<span>3.5%</span></td>
-                        <td>1,000.00<span style={{background:'#27ae60'}}>3.6%</span></td>
+                        <td>900.00<span>1.5%</span></td>
+                        <td>1,000.00<span style={{background:'#27ae60'}}>1.6%</span></td>
                         <td>100<span>0.1%</span></td>
                      </tr>
                      <tr>
                         <td>2. Bi weekly - CRR</td>
-                        <td>1,100.00<span>4.0%</span></td>
-                        <td>1,100.00<span>4.0%</span></td>
-                        <td>900<span>0.1%</span></td>
+                        <td>1,100.00<span>2.0%</span></td>
+                        <td>1,100.00<span>2.1%</span></td>
+                        <td>200<span>0.1%</span></td>
                      </tr>
                 </tbody>
             </Table>

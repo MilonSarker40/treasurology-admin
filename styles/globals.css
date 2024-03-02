@@ -499,6 +499,14 @@ money-market-blotter
 .money__market__blotter__grid ul li:last-child{
   width: 42%;
 }
+.fx__blotter__wrap ul li{
+  float: left;
+  width: 29%;
+  padding: 0 10px;
+}
+.fx__blotter__wrap ul li:nth-child(2){
+  width: 42%;
+}
 /*
 -----------------------------
  Common Input & Refresh Btn 
