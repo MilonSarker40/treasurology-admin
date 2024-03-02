@@ -8,12 +8,14 @@
     line-height: 1;
     color: #260944;
     font-weight: 600;
+    padding: 15px 10px;
 }
 .data__table__wrap table thead tr th span{
     display: none;
 }
 .data__table__wrap table tbody tr td{
     color: #5B5B98;
+    padding:15px 10px;
 }
 .data__table__wrap table tbody tr td:nth-child(10),
 .data__table__wrap table tbody tr td:nth-child(9){

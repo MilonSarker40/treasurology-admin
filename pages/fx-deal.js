@@ -1,9 +1,9 @@
 import React from 'react';
 import CheckRadio from '../components/MoneyMarketDeal/CheckRadio';
 import BreadCrumb from '../components/BreadCrumb/BreadCrumb';
-import FxBlotterFrom from '../components/FxBlotter/FxBlotterFrom';
-import FxBlotterSelect from '../components/FxBlotter/FxBlotterSelect';
-import BuySellRadio from '../components/FxBlotter/BuySellRadio';
+import FxDealFrom from '../components/FxDeal/FxDealFrom';
+import FxDealSelect from '../components/FxDeal/FxDealSelect';
+import BuySellRadio from '../components/FxDeal/BuySellRadio';
 
 const FxDeal = () => {
     return (
@@ -13,15 +13,15 @@ const FxDeal = () => {
                 <div className='row'>
                     <div className='col-md-4'>
                         <CheckRadio />
-                        <FxBlotterFrom />
+                        <FxDealFrom />
                     </div>
                     <div className='col-md-4'>
                         <BuySellRadio />
-                        <FxBlotterSelect />
+                        <FxDealSelect />
                     </div>
                     <div className='col-md-4'>
                         <BuySellRadio />
-                        <FxBlotterSelect />
+                        <FxDealSelect />
                     </div>
                 </div>
             </div>

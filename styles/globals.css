@@ -165,9 +165,12 @@ h5{
   width: 100%;
   z-index: 999;
 }
-.logo{
+.logo {
   text-align: center;
   padding: 60px 20px 40px;
+  background: #09084A;
+  position: relative;
+  z-index: 999999;
 }
 .logo a{
   display: inline-block;
@@ -856,4 +859,21 @@ display: block;
 .all__deals__tabs .tab-content {
   background: transparent !important;
   padding: 0 !important;
+}
+
+/*
+---------------------
+--------------------- 
+*/
+.reverse__repo__table{
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px 0 20px;
+}
+.reverse__repo__table h5{
+  font-size: 18px !important;
+  line-height: 1 !important;
+  padding-left: 25px;
+  border-bottom: 1px solid#E8E8E8;
+  padding-bottom: 20px;
 }

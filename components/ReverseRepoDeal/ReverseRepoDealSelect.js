@@ -1,14 +1,14 @@
 import React from 'react';
 
-const WalkingCustomerForm = () => {
+const ReverseRepoDealSelect = () => {
     return (
       <div className='book__type'>
-         <ul className='reset-list clearfix'> 
+        <ul className='reset-list clearfix'> 
            <li>
-              <label>Base Rate</label>
+              <label>Counter Party:</label>
               <div className='select__field book__type__fld'>
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>77</option>
+                    <option selected>Select Counter Party</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -16,10 +16,10 @@ const WalkingCustomerForm = () => {
               </div>
            </li>
            <li>
-              <label>Differential</label>
+              <label>Type of deal</label>
               <div className='select__field book__type__fld'>
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>2.5%</option>
+                    <option selected>Select Deal Type</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -27,10 +27,16 @@ const WalkingCustomerForm = () => {
               </div>
            </li>
            <li>
-              <label>Exchange Rate</label>
+              <label>Tenor (Day/s)</label>
+              <div className='input__field book__type__fld'>
+                  <input type='text' placeholder='Select Tenor' />
+              </div>
+           </li>
+           <li>
+              <label>Deal Date</label>
               <div className='select__field book__type__fld'>
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>88</option>
+                    <option selected>10 Apr 2022</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
@@ -38,33 +44,43 @@ const WalkingCustomerForm = () => {
               </div>
            </li>
            <li>
-              <label>Currency Bought</label>
+              <label>Amount</label>
               <div className='input__field book__type__fld'>
-                  <input type='text' placeholder='1000,000,000.000' />
+                  <input type='text' placeholder='100' />
               </div>
            </li>
            <li>
-              <label>Currency Sold</label>
+              <label>Interest Rate</label>
               <div className='input__field book__type__fld'>
-                  <input type='text' placeholder='1000,000,000.000' />
+                  <input type='text' placeholder='0%' />
               </div>
            </li>
            <li>
-              <label>Doc Upload</label>
+              <label>Value Date</label>
               <div className='select__field book__type__fld'>
-                    {/* <label for="formFileMultiple" class="form-label">Multiple files input example</label> */}
-                    <input class="form-control" type="file" id="formFileMultiple" multiple />
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>10 Apr 2022</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
               </div>
            </li>
            <li>
-              <label style={{paddingTop:'0'}}>Instruction</label>
+              <label>Maturity Date</label>
               <div className='input__field book__type__fld'>
-                  <textarea placeholder='Put Instruction Here'></textarea>
+                  <input type='text' placeholder='10 Apr 2022' />
               </div>
            </li>
+           <li>
+              <div className='submit__btn book__type__fld'>
+                <button>Place Order</button>
+              </div>
+           </li>
+           <li></li>
         </ul>
     </div>
     );
 }
 
-export default WalkingCustomerForm;
+export default ReverseRepoDealSelect;

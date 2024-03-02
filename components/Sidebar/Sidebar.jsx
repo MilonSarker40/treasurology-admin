@@ -61,7 +61,7 @@ const Sidebar = () => {
                           <li><Link href="/fx-deal" className={asPath==='/fx-deal' ? 'list active' : 'list'}>FX Deal</Link></li>
                           <li><Link href="/walking-customer-fx-deal" className={asPath==='/walking-customer-fx-deal' ? 'list active' : 'list'}>Walking Customer FX Deal</Link></li>
                           <li><Link href="/securities-deal" className={asPath==='/securities-deal' ? 'list active' : 'list'}>Securities Deal</Link></li>
-                          <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Repo/Reverse Repo Deal</Link></li>
+                          <li><Link href="/reverse-repo-deal" className={asPath==='/reverse-repo-deal' ? 'list active' : 'list'}>Repo/Reverse Repo Deal</Link></li>
                         </ul>
                       )}
                     </li>

@@ -1,13 +1,13 @@
 import React from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import ParticularTable from '../components/MoneyMarketBlotter/ParticularTable';
-import IndicatorTable from '../components/MoneyMarketBlotter/IndicatorTable';
-import DealBuyTable from '../components/MoneyMarketBlotter/DealBuyTable';
-import Classes from '../components/MoneyMarketBlotter/moneyblotter.module.css';
-import InFlowTable from '../components/MoneyMarketBlotter/InFlowTable';
+import ParticularTable from '../components/SecurityBlotter/ParticularTable';
+import IndicatorTable from '../components/SecurityBlotter/IndicatorTable';
+import DealBuyTable from '../components/SecurityBlotter/DealBuyTable';
+import Classes from '../styles/moneyblotter.module.css';
+import InFlowTable from '../components/SecurityBlotter/InFlowTable';
 import InputRefreshBtn from '../components/InputRefreshBtn/InputRefreshBtn';
-import OutFlowTable from '../components/MoneyMarketBlotter/OutFlowTable';
+import OutFlowTable from '../components/SecurityBlotter/OutFlowTable';
 
 const MoneyMarketBlotter = () => {
     return (

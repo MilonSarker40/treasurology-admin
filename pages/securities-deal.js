@@ -10,7 +10,7 @@ import IncomingOrderRadio from '../components/SecuritiesDeal/IncomingOrderRadio'
 const SecuritiesDeal = () => {
     return (
         <section className='securities__deal__sec__wrap prdLR30'>
-            <BreadCrumb subtitle='Liquidity Module' subtitle1='Dealing' subtitle2='Create Order' subtitle3='Securities Deal' title='Securities Deal' />
+            <BreadCrumb subtitle='Liquidity Module /' subtitle1='Dealing /' subtitle2='Create Order /' subtitle3='Securities Deal' title='Securities Deal' />
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-4'>
