@@ -229,6 +229,7 @@ New Sidebar Menu
 }
 .navbarMenu ul li ul li a {
   padding: 15px 10px 15px 60px;
+  font-size: 14px;
 }
 .navbarMenu > ul > li > a > i {
   position: absolute;
@@ -585,6 +586,7 @@ messaging__history__date
   float: left;
   padding: 0 10px !important;
 }
+.select__field__dwn select,
 .select__field__date select{
   width: 220px !important;
   border-radius: 8px;
@@ -594,6 +596,26 @@ messaging__history__date
 }
 .select__field__action select{
   width: 260px !important;
+}
+.select__field__dwn{
+  position: relative;
+}
+.select__field__dwn select{
+  width: 180px !important;
+  border-radius: 8px;
+  background-color: #2F80ED;
+  border-color:#2F80ED;
+  color: #fff;
+  padding-left: 50px;
+  background-image: url(../public/images/angle-icon1.png) !important;
+}
+.select__field__dwn i {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
 }
 /*
 ----------------------
@@ -884,4 +906,21 @@ display: block;
   padding-left: 25px;
   border-bottom: 1px solid#E8E8E8;
   padding-bottom: 20px;
+}
+/*
+----------------------------
+daily__dealer__limit__table
+---------------------------- 
+*/
+.daily__dealer__limit__table table{
+  margin-bottom: 0;
+}
+.daily__dealer__limit__table table thead tr th{
+  border: none;
+  font-weight: 500;
+  padding: 15px 15px;
+}
+.daily__dealer__limit__table table tbody tr td{
+  background:#f6f6f6;
+  padding: 15px 15px;
 }
