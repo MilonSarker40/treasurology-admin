@@ -3,7 +3,7 @@ import BreadCrumb from '../components/BreadCrumb/BreadCrumb';
 import SecuritiesDealForm from '../components/SecuritiesDeal/SecuritiesDealForm';
 import SecuritiesDealSelect from '../components/SecuritiesDeal/SecuritiesDealSelect';
 import SecuritiesDealForm1 from '../components/SecuritiesDeal/SecuritiesDealForm1';
-import BuySellRadio from '../components/FxBlotter/BuySellRadio';
+import BuySellRadio from '../components/SecuritiesDeal/BuySellRadio';
 import CategoryRadio from '../components/SecuritiesDeal/CategoryRadio';
 import IncomingOrderRadio from '../components/SecuritiesDeal/IncomingOrderRadio';
 

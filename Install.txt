@@ -6,6 +6,8 @@ https://imballinst.github.io/react-bs-datatable/storybook/?path=/story/uncontrol
 Image Upload
 https://codepen.io/beljems/pen/LYNZYNy
 
+npm i sharp
+
 
 
 

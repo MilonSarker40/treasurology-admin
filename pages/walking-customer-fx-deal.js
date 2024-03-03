@@ -4,7 +4,7 @@ import WalkingCustomerSelect from '../components/WalkingCustomerFxDeal/WalkingCu
 import WalkingCustomerForm from '../components/WalkingCustomerFxDeal/WalkingCustomerForm';
 import WalkingCustomerSelect2 from '../components/WalkingCustomerFxDeal/WalkingCustomerSelect2';
 import CheckRadio from '../components/MoneyMarketDeal/CheckRadio';
-import BuySellRadio from '../components/FxBlotter/BuySellRadio';
+import BuySellRadio from '../components/FxDeal/BuySellRadio';
 
 const WalkingCustomerFxDeal = () => {
     return (

@@ -9,12 +9,12 @@ const BuySellRadio = () => {
             </div>
             <div className={`${Classes.form__check__innr}`}>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Buy" id="Buy" checked/>
-                    <label class="form-check-label" for="Buy">Buy</label>
+                    <input class="form-check-input" type="radio" name="Buy" id="Buy1" checked/>
+                    <label class="form-check-label" for="Buy1">Buy</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Sell" id="Sell"/>
-                    <label class="form-check-label" for="Sell">Sell</label>
+                    <input class="form-check-input" type="radio" name="Sell1" id="Sell"/>
+                    <label class="form-check-label" for="Sell1">Sell</label>
                 </div>
             </div>
         </div>
