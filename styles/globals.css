@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,7 +22,9 @@ body {
   background:#f6f6f6 !important;
   font-size: 16px !important;
   line-height: 1.2 !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Inter", sans-serif !important;
+  /* font-family: "Poppins", sans-serif !important; */
+  
 }
 
 @layer utilities {
@@ -47,7 +50,7 @@ a, a:hover, a:focus, button:hover, button:focus{
 	outline: 0;
 }
 .clearfix::after{
-    content: "";
+    content:'';
     clear: both;
     display: table;
   }
@@ -119,7 +122,8 @@ All heading
 h1,h2,h3,h4,h5,h6{
 	line-height: 1.2 !important;
   font-weight: 700 !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Inter", sans-serif !important;
+  /* font-family: "Poppins", sans-serif !important; */
   color: #260944;
 }
 h1{
@@ -923,4 +927,61 @@ daily__dealer__limit__table
 .daily__dealer__limit__table table tbody tr td{
   background:#f6f6f6;
   padding: 15px 15px;
+  color: #5b5b98;
+}
+
+
+/*
+------------------------
+average__lending__table
+------------------------ 
+*/
+.average__lending__table{
+  padding-bottom: 40px;
+}
+.average__lending__table table thead tr th{
+  padding: 20px 10px;
+  border: none;
+  text-align: center;
+  width: 13%;
+}
+.average__lending__table table thead tr th td {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.table-colum tbody tr td{
+  background: transparent;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+  color: #5B5B98;
+  padding: 15px 10px;
+}
+
+/*
+-----------------------
+----------------------- 
+*/
+.import__payment__table .tab-content {
+  background: transparent;
+  padding: 0;
+}
+.import__payment__table ul li{
+  border-radius: 0;
+}
+.import__payment__table ul li button {
+  background: #E1E1E1;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  color: #260944;
+  padding: 15px 20px;
+  border-right: 1px solid#260944 !important;
+}
+.import__payment__table ul li:last-child button{
+  border-right: none !important;
+}
+.import__payment__table ul li button:hover{
+  background: #12A8EF;
+  color: #fff;
 }

@@ -13,22 +13,38 @@ import { Col, Row, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Classes from '../Contacts/contacts.module.css';
 
-const DealDetailsReportTable = () => {
+const PositionLendingTable = () => {
 
     const [data,setData]=useState([]);
   
     const bodyData=[
         {
-        counterparty: 'Bangladesh Finance LTD.',
-        productname: 'D301122BFINCIBL20',
-        tenor: '14 Day/s',
-        principal: '30 Nov 2023',
-        dealdate: 'OTC',
-        valuedate: '10,00,00,000.00',
-        maturitydate:'30 Nov 2023',
-        interestrate:'18.3%',
-        dealername: 'Approved',
-        action:<i class="ri-more-2-fill"></i>,
+        id: '342424234',
+        tenor: '10%',
+        amount: '377676931686',
+        interestrate: '8%',
+        maturitydate: '12 April 2023',
+        },
+        {
+        id: '342424234',
+        tenor: '10%',
+        amount: '377676931686',
+        interestrate: '8%',
+        maturitydate: '12 April 2023',
+        },
+        {
+        id: '342424234',
+        tenor: '10%',
+        amount: '377676931686',
+        interestrate: '8%',
+        maturitydate: '12 April 2023',
+        },
+        {
+        id: '342424234',
+        tenor: '10%',
+        amount: '377676931686',
+        interestrate: '8%',
+        maturitydate: '12 April 2023',
         },
      
     ]
@@ -39,46 +55,25 @@ const DealDetailsReportTable = () => {
         alignment: { horizontal: 'center' }
       },
       {
+        cellProps: {
+            style: function noRefCheck(){}
+        },
+            isFilterable: false,
+            isSortable: true,
+            prop: 'id',
+            title: 'Deal ID'
+      },
+      {
       isFilterable: true,
       isSortable: true,
-      prop: 'counterparty',
-      title: 'Counter Party'
+      prop: 'tenor',
+      title: 'Tenor'
       },
       {
       isFilterable: true,
       isSortable: false,
-      prop: 'productname',
-      title: 'Product Name'
-      },
-      {
-        isFilterable: true,
-        isSortable: false,
-        prop: 'tenor',
-        title: 'Tenor'
-      },
-      {
-        isFilterable: true,
-        isSortable: false,
-        prop: 'principal',
-        title: 'Principal'
-      },
-      {
-        isFilterable: true,
-        isSortable: false,
-        prop: 'dealdate',
-        title: 'Deal Date'
-      },
-      {
-        isFilterable: true,
-        isSortable: false,
-        prop: 'valuedate',
-        title: 'Value Date'
-      },
-      {
-        isFilterable: true,
-        isSortable: false,
-        prop: 'maturitydate',
-        title: 'Maturity Date'
+      prop: 'amount',
+      title: 'Amount'
       },
       {
         isFilterable: true,
@@ -89,14 +84,8 @@ const DealDetailsReportTable = () => {
       {
         isFilterable: true,
         isSortable: false,
-        prop: 'dealername',
-        title: 'Dealer Name'
-      },
-      {
-      isFilterable: false,
-      isSortable: true,
-      prop: 'action',
-      title: 'Action'
+        prop: 'maturitydate',
+        title: 'Maturity Date'
       },
    ]
   
@@ -110,6 +99,11 @@ const DealDetailsReportTable = () => {
 
     return (
         <div className={`${Classes.data__table__wrap}`}>
+          <table className='table' style={{marginBottom:0}}>
+            <tr>
+                <th style={{background:'#2C8BB9',padding:'20px 20px',textAlign:'center',color:'#fff'}}>Lending</th>
+            </tr>
+          </table>
           <DatatableWrapper
     
             body={data}
@@ -120,8 +114,9 @@ const DealDetailsReportTable = () => {
                 <TableBody />
             </table>
         </DatatableWrapper>
-    </div>
+     </div>
     );
 }
 
-export default DealDetailsReportTable;
+export default PositionLendingTable;
+

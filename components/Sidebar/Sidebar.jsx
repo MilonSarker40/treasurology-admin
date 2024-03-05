@@ -101,11 +101,11 @@ const Sidebar = () => {
                     <li><Link href="/counterparty-limit-utilization" className={asPath==='/counterparty-limit-utilization' ? 'list active' : 'list'}>Counterparty Limit Utilixation</Link></li>
                     <li><Link href="/dealer-limit-utilization" className={asPath==='/dealer-limit-utilization' ? 'list active' : 'list'}>Dealer Limit Utilization</Link></li>
                     <li><Link href="/daily-deal" className={asPath==='/daily-deal' ? 'list active' : 'list'}>Daily Deal Report</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Money Market Position</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Daily Average Deal</Link></li>
+                    <li><Link href="/money-market-position" className={asPath==='/money-market-position' ? 'list active' : 'list'}>Money Market Position</Link></li>
+                    <li><Link href="/daily-average-deal" className={asPath==='/daily-average-deal' ? 'list active' : 'list'}>Daily Average Deal</Link></li>
                     <li><Link href="/money-market-deal-details-report" className={asPath==='/money-market-deal-details-report' ? 'list active' : 'list'}>Money Market Deal Details</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>New L/C</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Import Payment</Link></li>
+                    <li><Link href="/import-payment" className={asPath==='/import-payment' ? 'list active' : 'list'}>Import Payment</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Export Proceeds</Link></li>
                     <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Inward Remittance</Link></li>
                   </ul>
