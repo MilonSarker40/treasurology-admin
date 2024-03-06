@@ -104,10 +104,10 @@ const Sidebar = () => {
                     <li><Link href="/money-market-position" className={asPath==='/money-market-position' ? 'list active' : 'list'}>Money Market Position</Link></li>
                     <li><Link href="/daily-average-deal" className={asPath==='/daily-average-deal' ? 'list active' : 'list'}>Daily Average Deal</Link></li>
                     <li><Link href="/money-market-deal-details-report" className={asPath==='/money-market-deal-details-report' ? 'list active' : 'list'}>Money Market Deal Details</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>New L/C</Link></li>
+                    <li><Link href="/report-new-lc" className={asPath==='/report-new-lc' ? 'list active' : 'list'}>New L/C</Link></li>
                     <li><Link href="/import-payment" className={asPath==='/import-payment' ? 'list active' : 'list'}>Import Payment</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Export Proceeds</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>Inward Remittance</Link></li>
+                    <li><Link href="/export-proceed" className={asPath==='/export-proceed' ? 'list active' : 'list'}>Export Proceeds</Link></li>
+                    <li><Link href="/inward-remittance" className={asPath==='/inward-remittance' ? 'list active' : 'list'}>Inward Remittance</Link></li>
                   </ul>
                 )}
               </li>
@@ -126,7 +126,7 @@ const Sidebar = () => {
                 {othersToggle &&(
                   <ul className='clearfix reset-list'>
                     <li><Link href="/notice-board" className={asPath==='/notice-board' ? 'list active' : 'list'}>Notice Board</Link></li>
-                    <li><Link href="/" className={asPath==='/' ? 'list active' : 'list'}>View All Holiday</Link></li>
+                    <li><Link href="/all-holiday" className={asPath==='/all-holiday' ? 'list active' : 'list'}>View All Holiday</Link></li>
                     <li><Link href="/online-user" className={asPath==='/online-user' ? 'list active' : 'list'}>Online User</Link></li>
                     <li><Link href="/all-contacts" className={asPath==='/all-contacts' ? 'list active' : 'list'}>All Contacts</Link></li>
                   </ul>
