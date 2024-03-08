@@ -51,9 +51,10 @@ const WalkingCustomerForm = () => {
            </li>
            <li>
               <label>Doc Upload</label>
-              <div className='select__field book__type__fld'>
-                    {/* <label for="formFileMultiple" class="form-label">Multiple files input example</label> */}
+              <div className='select__field book__type__fld file__upload__field'>
+                    <label for="formFileMultiple" class="form-label" multiple>Select Document</label>
                     <input class="form-control" type="file" id="formFileMultiple" multiple />
+                    <span></span>
               </div>
            </li>
            <li>

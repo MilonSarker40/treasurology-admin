@@ -9,7 +9,7 @@ import BuySellRadio from '../components/FxDeal/BuySellRadio';
 const WalkingCustomerFxDeal = () => {
     return (
         <section className='walking__customer__sec__wrap prdLR30'>
-            <BreadCrumb subtitle='Liquidity Module /' subtitle1='Dealing /' subtitle2='Create Order' subtitle3='Walking Customer FX Deal' title='Walking Customer FX Deal' />
+            <BreadCrumb subtitle='Liquidity Module /' subtitle1='Dealing /' subtitle2='Create Order /' subtitle3='Walking Customer FX Deal' title='Walking Customer FX Deal' />
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-4'>

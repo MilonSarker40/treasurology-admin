@@ -18,6 +18,7 @@ const Sidebar = () => {
   const [limitToggle, setLimitToggle] = useState(false)
   const [othersToggle, setOthersToggle] = useState(false)
   const [createToggle, setCreateToggle] = useState(false)
+  const [documentToggle, setDocumentToggle] = useState(false)
 
   return (
     <>
@@ -62,6 +63,7 @@ const Sidebar = () => {
                           <li><Link href="/walking-customer-fx-deal" className={asPath==='/walking-customer-fx-deal' ? 'list active' : 'list'}>Walking Customer FX Deal</Link></li>
                           <li><Link href="/securities-deal" className={asPath==='/securities-deal' ? 'list active' : 'list'}>Securities Deal</Link></li>
                           <li><Link href="/reverse-repo-deal" className={asPath==='/reverse-repo-deal' ? 'list active' : 'list'}>Repo/Reverse Repo Deal</Link></li>
+                          <li><Link href="/single-deal-details" className={asPath==='/single-deal-details' ? 'list active' : 'list'}>Single Deal Details</Link></li>
                         </ul>
                       )}
                     </li>
@@ -132,11 +134,17 @@ const Sidebar = () => {
                   </ul>
                 )}
               </li>
-              {/* <li><Link href="/datetime" className={asPath==='/datetime' ? 'list active' : 'list'}><i class="ri-radar-line"></i>DateTime</Link></li>
-              <li><Link href="/settlement" className={asPath==='/settlement' ? 'list active' : 'list'}><i class="ri-radar-line"></i>Settlement</Link></li>
-              <li><Link href="/indexapi" className={asPath==='/indexapi' ? 'list active' : 'list'}><i class="ri-file-text-line"></i>Api Index</Link></li>
-              <li><Link href="/simulator" className={asPath==='/simulator' ? 'list active' : 'list'}><i class="ri-pages-fill"></i>Simulator</Link></li>
-              <li><Link href="/testcomponents" className={asPath==='/testcomponents' ? 'list active' : 'list'}><i class="ri-settings-3-fill"></i>Testcomponents</Link></li> */}
+              <li>
+                <Link onClick={() => setDocumentToggle(!documentToggle)} href='#'><i class="ri-file-text-fill"></i>Document Management<span><i class="ri-arrow-down-s-line"></i></span></Link>
+                {documentToggle &&(
+                  <ul className='clearfix reset-list'>
+                    <li><Link href="/document-management" className={asPath==='/notice-board' ? 'list active' : 'list'}>Document Management</Link></li>
+                    <li><Link href="/holiday-maintenance" className={asPath==='/holiday-maintenance' ? 'list active' : 'list'}>Currency Holiday Maintenance</Link></li>
+                    <li><Link href="/online-user" className={asPath==='/online-user' ? 'list active' : 'list'}>Online User</Link></li>
+                    <li><Link href="/all-contacts" className={asPath==='/all-contacts' ? 'list active' : 'list'}>All Contacts</Link></li>
+                  </ul>
+                )}
+              </li>
            </ul>
         </nav>
       </div>

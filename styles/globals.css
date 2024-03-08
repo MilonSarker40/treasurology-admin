@@ -343,13 +343,13 @@ New Sidebar Menu
  Common Input Css
 ------------------
 */
-.book__type ul li{
+.book__type > ul > li{
   padding-bottom: 25px;
   display: inline-block;
   vertical-align: baseline;
   width: 100%;
 }
-.book__type ul li label{
+.book__type > ul > li > label{
   width: 30%;
   float: left;
 }
@@ -357,8 +357,8 @@ New Sidebar Menu
   width: 70%;
   float: left;
 }
-.label__text label,
-.book__type ul li label{
+.label__text > label,
+.book__type > ul > li > label{
   font-size: 16px;
   line-height: 1;
   color: #5B5B98;
@@ -391,6 +391,41 @@ input:focus{
 }
 .form-select:focus{
   box-shadow: none !important;
+}
+.file__upload__field{
+  position: relative;
+}
+.file__upload__field input{
+  display: none;
+}
+.file__upload__field label{
+  width: 100% !important;
+  height: 50px;
+  background: #fff;
+  margin-bottom: 0;
+  border: 1px solid#E8E6F8;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  color: #5B5B98;
+  opacity: 1;
+  border-radius: 5px;
+  padding: 15px 15px;
+}
+.file__upload__field span::before,
+.file__upload__field span::after{
+  content: '';
+  position: absolute;
+  right:50px;
+  top: 10px;
+  width: 24px;
+  height: 28px;
+  background: url(../public/images/pdf-icon.png);
+  background-repeat: no-repeat;
+  background-size: 24px 28px;
+}
+.file__upload__field span::before{
+  background: url(../public/images/xcel-icon.png);
+  right: 15px;
 }
 .submit__btn button{
   font-size: 16px;
@@ -995,4 +1030,35 @@ average__lending__table
   width: 25%;
   float: left;
   padding: 0 15px 20px;
+}
+
+/*
+---------------------
+single__deal__details
+---------------------  
+*/
+.single__deal__details {
+  background: #EEEEEE;
+  padding: 20px 20px;
+  margin: 0 -20px;
+  margin-bottom: 20px;
+}
+.single__deal__details h5{
+  margin-bottom: 20px;
+  color:#260944;
+}
+.deal__dtls__btn{
+  text-align: center;
+  padding-bottom: 30px;
+}
+.deal__dtls__btn button{
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  background: #27AE60;
+  padding: 10px 20px;
+  margin: 0 10px;
+}
+.deal__dtls__btn button:last-child{
+  background:#EB5757;
 }
