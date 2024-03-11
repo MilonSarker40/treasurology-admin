@@ -1,7 +1,8 @@
+import React from 'react';
 import Settlement from '../components/MoneyMarketDeal/Settlement';
 import BreadCrumb from '../components/BreadCrumb/BreadCrumb';
 import BookType from '../components/MoneyMarketDeal/BookType';
-import React from 'react';
+
 
 
 const MoneyMarketDeal = () => {

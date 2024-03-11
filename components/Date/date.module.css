@@ -22,7 +22,8 @@
     background-position: 165px;
 }
 .form__date__picher__wrp input{
-    max-width: 350px !important;
+    /* max-width: 350px !important; */
+    max-width: 100% !important;
     width: 100% !important;
     background-position: 95% !important;
 }

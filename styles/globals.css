@@ -1062,3 +1062,9 @@ single__deal__details
 .deal__dtls__btn button:last-child{
   background:#EB5757;
 }
+
+.react-datepicker-wrapper {
+  display: block !important;
+  padding: 0;
+  border: 0;
+}
