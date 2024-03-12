@@ -26,31 +26,49 @@ const Login = () => {
         setCaptchaChecked(!captchaChecked);
     };
 
+    var details = {
+        'username': email,
+        'password': password,
+        'grant_type': 'password',
+        'client_id': 'Test',
+        'client_secret': 'test123',
+        'scope': 'offline_access'
+    };
+
+    var formBody = [];
+    for (var property in details) {
+        var encodedKey = encodeURIComponent(property);
+        var encodedValue = encodeURIComponent(details[property]);
+        formBody.push(encodedKey + "=" + encodedValue);
+    }
+    formBody = formBody.join("&");
+
     // Function to handle form submission
     const handleLogin = () => {
         // Check if all required fields are filled and captcha is checked
         if (email && password && agreeTerms && captchaChecked) {
             // Make API call
-            fetch('your-api-endpoint', {
+            fetch('https://api.treasury.arthik.io/api/connect/token', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify({
-                    email,
-                    password,
-                    subscribeNewsletter,
-                }),
+                // body: JSON.stringify({
+                //     email,
+                //     password,
+                //     subscribeNewsletter,
+                // }),
+                body: formBody,
             })
-            .then(response => response.json())
-            .then(data => {
-                // Handle API response
-                console.log(data);
-            })
-            .catch(error => {
-                // Handle errors
-                console.error('Error:', error);
-            });
+                .then(response => response.json())
+                .then(data => {
+                    // Handle API response
+                    console.log(data);
+                })
+                .catch(error => {
+                    // Handle errors
+                    console.error('Error:', error);
+                });
         } else {
             // Display error message or handle invalid form submission
             console.error('Please fill all required fields and verify captcha.');
@@ -60,7 +78,7 @@ const Login = () => {
     return (
         <section className='login__sec__wrap prdLR30 clearfix'>
             <div className='login__lft'>
-                <Image src={LoginLogo} width='180' height='100' /> 
+                <Image src={LoginLogo} width='180' height='100' />
             </div>
             <div className='login__rgt'>
                 <div className='login__innr'>
@@ -79,18 +97,18 @@ const Login = () => {
                         <span>Use 8 or more characters with a mix of letters, numbers & symbols</span>
                     </div>
                     <div className='inputtype-checkbox'>
-                        <label className="container">Agree to our <a href='#'>Terms</a> of use and <a href='#'>Privacy Policy</a>  
+                        <label className="container">Agree to our <a href='#'>Terms</a> of use and <a href='#'>Privacy Policy</a>
                             <input type="checkbox" checked={agreeTerms} onChange={(e) => handleCheckboxChange(e, setAgreeTerms)} />
                             <span className="checkmark"></span>
                         </label>
-                        <label className="container">Subscribe to our monthly newsletter  
+                        <label className="container">Subscribe to our monthly newsletter
                             <input type="checkbox" checked={subscribeNewsletter} onChange={(e) => handleCheckboxChange(e, setSubscribeNewsletter)} />
                             <span className="checkmark"></span>
                         </label>
                     </div>
                     <div className='login__captcha'>
                         <button className='inputtype-checkbox' onClick={handleCaptchaToggle}>
-                            <label className="container">I’m not a robot  
+                            <label className="container">I’m not a robot
                                 <input type="checkbox" checked={captchaChecked} readOnly />
                                 <span className="checkmark"></span>
                             </label>
