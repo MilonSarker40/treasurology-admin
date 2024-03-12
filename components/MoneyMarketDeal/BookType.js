@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CheckRadio from './CheckRadio';
 
 const BookType = () => {
     // State variables to hold field values
+    const [currencylist, setCurrencylist] = useState([]);
     const [amount, setAmount] = useState('');
     const [currency, setCurrency] = useState('BDT');
     const [interestRate, setInterestRate] = useState('');
@@ -11,6 +12,18 @@ const BookType = () => {
     const [acceptanceType, setAcceptanceType] = useState('Full');
     const [paymentMethod, setPaymentMethod] = useState('Full');
     const [instruction, setInstruction] = useState('');
+    const token = localStorage.getItem("access_token");
+
+    useEffect(() => {
+        fetch("https://api.treasury.arthik.io/api/Currency", {
+            headers: {
+                // 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+        })
+            .then(res => res.json())
+            .then(data => setCurrencylist(data))
+    }, [])
 
     // Function to handle input change
     const handleInputChange = (e, setter) => {
@@ -31,6 +44,7 @@ const BookType = () => {
     const handlePlaceOrder = () => {
         // Make API call with the collected data
         // Example:
+
         fetch('your-api-endpoint', {
             method: 'POST',
             headers: {

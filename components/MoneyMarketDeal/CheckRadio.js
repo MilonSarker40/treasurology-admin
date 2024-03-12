@@ -1,29 +1,58 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Classes from '../../components/MoneyMarketDeal/checkradio.module.css';
 
 const CheckRadio = () => {
     const [selectedBookType, setSelectedBookType] = useState('DBU');
+    const [list, setList] = useState([]);
+    const url = "https://api.treasury.arthik.io/api/BookType";
+    const token = localStorage.getItem("access_token");
+    const type = localStorage.getItem("token_type");
     
     // Function to handle radio button change
     const handleRadioChange = (e) => {
         setSelectedBookType(e.target.value);
     };
 
-    // Function to handle API call
-    const handleAPICall = () => {
-        // Make API call here
-        fetch('your-api-endpoint', {
+    useEffect(() => {
+        fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
-            body: JSON.stringify({
-                bookType: selectedBookType,
-            }),
+            // body: JSON.stringify({
+            //     bookType: selectedBookType,
+            // }),
         })
         .then(response => response.json())
         .then(data => {
             // Handle API response
+            console.log("RADIO BOOKTYPE")
+            console.log(data);
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error:', error);
+        });
+    }, [])
+
+    // Function to handle API call
+    const handleAPICall = () => {
+        // Make API call here
+        fetch(url, {
+            // method: 'POST',
+            headers: {
+                // 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            // body: JSON.stringify({
+            //     bookType: selectedBookType,
+            // }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle API response
+            console.log("RADIO BOOKTYPE")
             console.log(data);
         })
         .catch(error => {
@@ -76,7 +105,7 @@ const CheckRadio = () => {
                 </div>
             </div>
             {/* Example of triggering API call */}
-            <button onClick={handleAPICall}>Make API Call</button>
+            {/* <button onClick={handleAPICall}>Make API Call</button> */}
         </div>
     );
 }

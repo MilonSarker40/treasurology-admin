@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import LoginLogo from '../public/images/login-logo.png';
-import CaptchaIcon from '../public/images/recaptcha-icon.png';
+import LoginLogo from '../../public/images/login-logo.png';
+import CaptchaIcon from '../../public/images/recaptcha-icon.png';
 
-const Login = () => {
+const LoginForm = () => {
     // State variables to hold form values
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -86,7 +86,7 @@ const Login = () => {
                     localStorage.setItem("Email", data.Email)
                     localStorage.setItem("FullName", data.FullName)
                     localStorage.setItem("loginState", true)
-
+                    location.reload()
                 })
                 .catch(error => {
                     // Handle errors
@@ -148,4 +148,4 @@ const Login = () => {
     );
 }
 
-export default Login;
+export default LoginForm;
