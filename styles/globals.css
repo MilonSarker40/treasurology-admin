@@ -262,7 +262,7 @@ New Sidebar Menu
 .navbarMenu ul li a.active,
 .navbarMenu ul li a:hover{
   background: #fff;
-  color: #000;
+  color: #000 !important;
 }
 .navbarMenu ul li a.active i,
 .navbarMenu ul li a:hover i{
@@ -712,14 +712,15 @@ messaging__history__date
 ------------------- 
 */
 .login__sec__wrap{
-  padding-top: 40px;
-  padding-left: 40px !important;
-  padding-bottom: 40px;
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .login__lft{
   width: 50%;
   float: left;
-  height: 800px;
+  height: 100vh;
   background: url(../public/images/login-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -732,7 +733,11 @@ messaging__history__date
   width: 50%;
   float: right;
   padding-left: 80px;
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 .login__innr{
   max-width: 500px;

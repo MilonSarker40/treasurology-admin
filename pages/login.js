@@ -99,7 +99,7 @@ const Login = () => {
     };
 
     return (
-        <section className='login__sec__wrap prdLR30 clearfix'>
+        <section className='login__sec__wrap clearfix'>
             <div className='login__lft'>
                 <Image src={LoginLogo} width='180' height='100' />
             </div>
