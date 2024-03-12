@@ -64,7 +64,7 @@ const SettlementRadio = () => {
                 </div>
             </div>
             {/* Example of triggering API call */}
-            <button onClick={handleAPICall}>Make API Call</button>
+            {/* <button onClick={handleAPICall}>Make API Call</button> */}
         </div>
     );
 }

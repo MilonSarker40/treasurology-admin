@@ -121,12 +121,6 @@ const Settlement = () => {
                         </select>
                     </div>
                 </li>
-                <li>
-                    <label></label>
-                    <div className='submit__btn book__type__fld'>
-                        <button onClick={handlePlaceOrder}>Place Order</button>
-                    </div>
-                </li>
             </ul>
         </div>
     </div>

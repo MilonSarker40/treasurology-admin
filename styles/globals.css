@@ -171,7 +171,7 @@ h5{
 }
 .logo {
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 60px 20px 0;
   background: #09084A;
   position: relative;
   z-index: 999999;
@@ -183,6 +183,17 @@ h5{
   max-width: 240px;
   width: 100%;
 }
+.logo h4 {
+  color: #fff;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+  padding-left: 10px;
+  margin-bottom: 0;
+  text-align: left;
+  padding-bottom: 30px;
+  padding-top: 25px;
+}
 
 
 /*
@@ -190,14 +201,6 @@ h5{
 New Sidebar Menu
 --------------------- 
 */
-.navbarMenu h4 {
-  color: #fff;
-  font-size: 20px !important;
-  line-height: 1 !important;
-  font-weight: 400 !important;
-  padding-left: 20px;
-  margin-bottom: 30px;
-}
 .navbarMenu {
   overflow: hidden;
   position: relative;

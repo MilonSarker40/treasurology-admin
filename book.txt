@@ -17,20 +17,13 @@ const BookType = () => {
     useEffect(() => {
         fetch("https://api.treasury.arthik.io/api/Currency", {
             headers: {
+                // 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             },
         })
-        .then(res => {
-            if (!res.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return res.json();
-        })
-        .then(data => setCurrencylist(data))
-        .catch(error => {
-            console.error('Error fetching currency:', error);
-        });
-    }, [token]);
+            .then(res => res.json())
+            .then(data => setCurrencylist(data))
+    }, [])
 
     // Function to handle input change
     const handleInputChange = (e, setter) => {
@@ -51,6 +44,7 @@ const BookType = () => {
     const handlePlaceOrder = () => {
         // Make API call with the collected data
         // Example:
+
         fetch('your-api-endpoint', {
             method: 'POST',
             headers: {
@@ -74,7 +68,7 @@ const BookType = () => {
         })
         .catch(error => {
             // Handle errors
-            console.error('Error placing order:', error);
+            console.error('Error:', error);
         });
     };
 
@@ -93,9 +87,9 @@ const BookType = () => {
                         <label>Currency</label>
                         <div className='select__field book__type__fld'>
                             <select className="form-select" aria-label="Currency" value={currency} onChange={(e) => handleSelectChange(e, setCurrency)}>
-                                {currencylist.map((currency, index) => (
-                                    <option key={index} value={currency}>{currency}</option>
-                                ))}
+                                <option value="BDT">BDT</option>
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
                             </select>
                         </div>
                     </li>

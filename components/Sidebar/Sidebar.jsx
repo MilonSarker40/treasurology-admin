@@ -25,9 +25,9 @@ const Sidebar = () => {
       <div className='left_sidebar clearfix'>
         <div className='logo'>
             <Link href='/dashboard'><Image src={Logo} width='150px' height='50px' alt='' /></Link>
+            <h4>Liquidity Module</h4>
         </div>
         <nav className='navbarMenu'>
-            <h4>Liquidity Module</h4>
            <ul className='clearfix reset-list'>
               <li><Link href="/dashboard" className={asPath==='/dashboard' ? 'list active' : 'list'}><i class="ri-computer-line"></i>Dashboard</Link></li>
               <li>
@@ -58,7 +58,7 @@ const Sidebar = () => {
                       <Link onClick={() => setCreateToggle(!createToggle)} href='#'>Create Deal<span><i class="ri-arrow-down-s-line"></i></span></Link>
                       {createToggle &&(
                         <ul className='clearfix reset-list'>
-                          <li><Link href="/money-market-deal" className={asPath==='/money-market-deal' ? 'list active' : 'list'}>Money Marketing Deal</Link></li>
+                          <li><Link href="/money-market-deal" className={asPath==='/money-market-deal' ? 'list active' : 'list'}>Money Market Deal</Link></li>
                           <li><Link href="/fx-deal" className={asPath==='/fx-deal' ? 'list active' : 'list'}>FX Deal</Link></li>
                           <li><Link href="/walking-customer-fx-deal" className={asPath==='/walking-customer-fx-deal' ? 'list active' : 'list'}>Walking Customer FX Deal</Link></li>
                           <li><Link href="/securities-deal" className={asPath==='/securities-deal' ? 'list active' : 'list'}>Securities Deal</Link></li>
