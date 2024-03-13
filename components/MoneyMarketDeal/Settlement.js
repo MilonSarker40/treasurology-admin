@@ -10,7 +10,7 @@ const Settlement = () => {
     const [productName, setProductName] = useState('N/A');
     const [interestAmount, setInterestAmount] = useState('0.00');
 
-    // Function to handle select change
+    
     const handleSelectChange = (e, setter) => {
         setter(e.target.value);
     };
