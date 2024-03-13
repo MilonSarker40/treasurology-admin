@@ -52,11 +52,17 @@ const LoginForm = () => {
             let userquery = `https://api.treasury.arthik.io/api/Authorization/rsaEncrypt/${email}`
             let passquery = `https://api.treasury.arthik.io/api/Authorization/rsaEncrypt/${password}`
 
-            fetch(userquery)
+            fetch(userquery, {
+                headers: {
+                    'Access-Control-Allow-Origin':'*'
+                }})
                 .then(response => response.text())
                 .then(text => setEncryptedusername(text))
 
-            fetch(passquery)
+            fetch(passquery, {
+                headers: {
+                    'Access-Control-Allow-Origin':'*'
+                }})
                 .then(response => response.text())
                 .then(text => setEncryptedpassword(text))
 
@@ -66,6 +72,8 @@ const LoginForm = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
+                    'Access-Control-Allow-Origin':'*',
+                    
                 },
                 // body: JSON.stringify({
                 //     email,
