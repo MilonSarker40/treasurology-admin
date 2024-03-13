@@ -12,10 +12,11 @@ const SettlementRadio = () => {
     // Function to handle API call
     const handleAPICall = () => {
         // Make API call here
-        fetch('your-api-endpoint', {
+        fetch('https://api.treasury.arthik.io/api/TransactionType', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({
                 type: selectedType,

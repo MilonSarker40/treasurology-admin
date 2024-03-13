@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import CheckRadio from './CheckRadio';
 import SettlementRadio from './SettlementRadio';
 import FormDate from '../FormDate/FormDate';
+import Classes from '../../components/MoneyMarketDeal/checkradio.module.css';
 
 const BookType = () => {
     // State variables to hold field values
@@ -9,6 +9,8 @@ const BookType = () => {
     const [instrumentList, setInstrumentList] = useState([]);
     const [acceptanceTypeList, setacceptanceTypeList] = useState([]);
     const [paymentMethodList, setPaymentMethodList] = useState([]);
+    const [settlementAccountList, setSettlementAccountList] = useState([]);
+    const [settlementTypeList, setSettlementTypeList] = useState([]);
 
     const [currency, setCurrency] = useState('BDT');
     const [instrumentName, setInstrumentName] = useState('Select Product');
@@ -122,6 +124,42 @@ const BookType = () => {
             console.error('Error fetching TenorDay:', error);
         });
 
+        //Settlement Account Api
+        fetch("https://api.treasury.arthik.io/api/SettlementBank", {
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Access-Control-Allow-Origin':'*'
+            },
+        })
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then(data => setSettlementAccountList(data))
+        .catch(error => {
+            console.error('Error fetching Payment:', error);
+        });
+
+        //Settlement Type Api
+        fetch("https://api.treasury.arthik.io/api/SettlementType", {
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Access-Control-Allow-Origin':'*'
+            },
+        })
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then(data => setSettlementTypeList(data))
+        .catch(error => {
+            console.error('Error fetching Payment:', error);
+        });
+
 
     }, [token]);
 
@@ -171,12 +209,114 @@ const BookType = () => {
         });
     };
 
+    //Book Type Api Call
+    const [selectedBookType, setSelectedBookType] = useState('DBU');
+    const [list, setList] = useState([]);
+    const url = "https://api.treasury.arthik.io/api/BookType";
+    // const token = localStorage.getItem("access_token");
+    const type = localStorage.getItem("token_type");
+    
+    // Function to handle radio button change
+    const handleRadioChange = (e) => {
+        setSelectedBookType(e.target.value);
+    };
+
+    useEffect(() => {
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            // body: JSON.stringify({
+            //     bookType: selectedBookType,
+            // }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle API response
+            console.log("RADIO BOOKTYPE")
+            console.log(data);
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error:', error);
+        });
+    }, [token])
+
+    // Function to handle API call
+    const handleAPICall = () => {
+        // Make API call here
+        fetch(url, {
+            // method: 'POST',
+            headers: {
+                // 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            // body: JSON.stringify({
+            //     bookType: selectedBookType,
+            // }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle API response
+            console.log("RADIO BOOKTYPE")
+            console.log(data);
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error:', error);
+        });
+    };
+
     return (
         <div className='book__type__wrap'>
             <div className='money__deal__form__radio'>
                 <ul className='clearfix reset-list'>
                     <li>
-                        <CheckRadio />
+                      <div className='form__check__wrap clearfix'>
+                        <div className={`${Classes.label__text}`}>
+                            <label>Book Type</label>
+                        </div>
+                        <div className={`${Classes.form__check__innr}`}>
+                            <div className="form-check">
+                                <input
+                                    className="form-check-input"
+                                    type="radio"
+                                    name="bookType"
+                                    id="DBU"
+                                    value="DBU"
+                                    checked={selectedBookType === 'DBU'}
+                                    onChange={handleRadioChange}
+                                />
+                                <label className="form-check-label" htmlFor="DBU">DBU</label>
+                            </div>
+                            <div className="form-check">
+                                <input
+                                    className="form-check-input"
+                                    type="radio"
+                                    name="bookType"
+                                    id="OBU"
+                                    value="OBU"
+                                    checked={selectedBookType === 'OBU'}
+                                    onChange={handleRadioChange}
+                                />
+                                <label className="form-check-label" htmlFor="OBU">OBU</label>
+                            </div>
+                            <div className="form-check">
+                                <input
+                                    className="form-check-input"
+                                    type="radio"
+                                    name="bookType"
+                                    id="Islamic"
+                                    value="Islamic"
+                                    checked={selectedBookType === 'Islamic'}
+                                    onChange={handleRadioChange}
+                                />
+                                <label className="form-check-label" htmlFor="Islamic">Islamic</label>
+                            </div>
+                        </div>
+                    </div>
                     </li>
                     <li>
                         <SettlementRadio />
@@ -195,10 +335,9 @@ const BookType = () => {
                         <label>Settlement Account</label>
                         <div className='select__field book__type__fld'>
                             <select className="form-select" aria-label="Settlement Account" value={settlementAccount} onChange={(e) => handleSelectChange(e, setSettlementAccount)}>
-                                <option value="Bangladesh Bank CA">Bangladesh Bank CA</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                {settlementAccountList.map((settlementAccount,index)=>(
+                                    <option value={settlementAccount}>{settlementAccount}</option>
+                                ))}
                             </select>
                         </div>
                     </li>
@@ -216,10 +355,9 @@ const BookType = () => {
                         <label>Settlement Type</label>
                         <div className='select__field book__type__fld'>
                             <select className="form-select" aria-label="Settlement Type" value={settlementType} onChange={(e) => handleSelectChange(e, setSettlementType)}>
-                                <option value="T+0">T+0</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                {settlementTypeList.map((settlementType,index)=>(
+                                    <option value={settlementType}>{settlementType}</option>
+                                ))}
                             </select>
                         </div>
                     </li>
