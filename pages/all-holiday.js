@@ -1,6 +1,6 @@
 import React from 'react';
 import BreadCrumb from '../components/BreadCrumb/BreadCrumb';
-import AllHoliday from '../components/AllHoliday/AllHoliday';
+// import AllHoliday from '../components/AllHoliday/AllHoliday';
 
 
 const Allholiday = () => {
@@ -11,7 +11,7 @@ const Allholiday = () => {
                 <div className='row'>
                     <div className='col-md-12'>
                         <div className='all__holiday__wrap'>
-                            <ul className='clearfix reset-list'>
+                            {/* <ul className='clearfix reset-list'>
                                 <li>
                                     <AllHoliday />
                                 </li>
@@ -48,7 +48,7 @@ const Allholiday = () => {
                                 <li>
                                     <AllHoliday />
                                 </li>
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>

@@ -31,7 +31,8 @@ const BookType = () => {
         //Currency Api
         fetch("https://api.treasury.arthik.io/api/Currency", {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`,
+                'Access-Control-Allow-Origin':'*'
             },
         })
         .then(res => {
@@ -48,7 +49,8 @@ const BookType = () => {
         //Instrument Api
         fetch("https://api.treasury.arthik.io/api/Instrument", {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`,
+                'Access-Control-Allow-Origin':'*'
             },
         })
         .then(res => {
@@ -65,7 +67,8 @@ const BookType = () => {
         //Acceptance Type
         fetch("https://api.treasury.arthik.io/api/AcceptanceType", {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`,
+                'Access-Control-Allow-Origin':'*'
             },
         })
         .then(res => {
@@ -82,7 +85,8 @@ const BookType = () => {
         //Payment Method Api
         fetch("https://api.treasury.arthik.io/api/PaymentMethod", {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`,
+                'Access-Control-Allow-Origin':'*'
             },
         })
         .then(res => {
