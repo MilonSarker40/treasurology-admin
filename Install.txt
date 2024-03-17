@@ -15,7 +15,8 @@ https://www.copycat.dev/blog/react-datepicker/
 npm i sharp
 
 
-
+username: admin@example.com
+password: L3T123..
 
 
 
