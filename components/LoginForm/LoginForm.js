@@ -52,19 +52,28 @@ const LoginForm = () => {
             let userquery = `https://api.treasury.arthik.io/api/Authorization/rsaEncrypt/${email}`
             let passquery = `https://api.treasury.arthik.io/api/Authorization/rsaEncrypt/${password}`
 
+            console.log("userquery : ", userquery);
+            console.log("passquery : ", passquery);
+
             fetch(userquery, {
+                method: 'GET',
                 headers: {
-                    'Access-Control-Allow-Origin':'*'
-                }})
+                    'Access-Control-Allow-Origin': '*'
+                }
+              })
                 .then(response => response.text())
                 .then(text => setEncryptedusername(text))
+                .catch(error => console.error('Error fetching username:', error));
 
             fetch(passquery, {
+                method: 'GET',
                 headers: {
-                    'Access-Control-Allow-Origin':'*'
-                }})
+                    'Access-Control-Allow-Origin': '*'
+                }
+              })
                 .then(response => response.text())
                 .then(text => setEncryptedpassword(text))
+                .catch(error => console.error('Error fetching password:', error));
 
             // Make API call
             console.log(`form body : ${formBody}`)
