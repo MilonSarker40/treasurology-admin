@@ -118,7 +118,7 @@ const LoginForm = () => {
     return (
         <section className='login__sec__wrap prdLR30 clearfix'>
             <div className='login__lft'>
-                <Image src={LoginLogo} width='180' height='100' />
+                <Image src={LoginLogo} width='180' height='100' alt='Login Logo' />
             </div>
             <div className='login__rgt'>
                 <div className='login__innr'>
@@ -152,7 +152,7 @@ const LoginForm = () => {
                                 <input type="checkbox" checked={captchaChecked} readOnly />
                                 <span className="checkmark"></span>
                             </label>
-                            <Image src={CaptchaIcon} width='48px' height='46px' />
+                            <Image src={CaptchaIcon} width='48px' height='46px' alt='Captcha Icon' />
                         </button>
                     </div>
                     <div className='login__input__btn'>

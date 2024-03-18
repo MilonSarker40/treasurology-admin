@@ -14,6 +14,10 @@ https://www.copycat.dev/blog/react-datepicker/
 
 npm i sharp
 
+Website
+https://treasury.arthik.io/
+Api
+https://api.treasury.arthik.io/swagger/index.html
 
 username: admin@example.com
 password: L3T123..
