@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SettlementRadio from './SettlementRadio';
 import FormDate from '../FormDate/FormDate';
 import Classes from '../../components/MoneyMarketDeal/checkradio.module.css';
+import CounterPartySelect from './CounterPartySelect';
 
 const BookType = () => {
     // State variables to hold field values
@@ -342,6 +343,12 @@ const BookType = () => {
                         </div>
                     </li>
                     <li>
+                        <label>CounterParty</label>
+                        <div className='select__field book__type__fld'>
+                            <CounterPartySelect />
+                        </div>
+                    </li>
+                    <li>
                         <label>Currency</label>
                         <div className='select__field book__type__fld'>
                             <select className="form-select" aria-label="Currency" value={currency} onChange={(e) => handleSelectChange(e, setCurrency)}>
@@ -450,6 +457,12 @@ const BookType = () => {
                         </div>
                     </li>
                     <li>
+                        <label></label>
+                        <div className='submit__btn book__type__fld'>
+                            <button onClick={handlePlaceOrder}>Place Order</button>
+                        </div>
+                    </li>
+                    <li>
                         <label>Interest Amount</label>
                         <div className='select__field book__type__fld'>
                             <select className="form-select" aria-label="Interest Amount" value={interestAmount} onChange={(e) => handleSelectChange(e, setInterestAmount)}>
@@ -458,12 +471,6 @@ const BookType = () => {
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
                             </select>
-                        </div>
-                    </li>
-                    <li>
-                        <label></label>
-                        <div className='submit__btn book__type__fld'>
-                            <button onClick={handlePlaceOrder}>Place Order</button>
                         </div>
                     </li>
                 </ul>

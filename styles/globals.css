@@ -1,6 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
-@tailwind base;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap")
+  @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -19,12 +19,11 @@
 }
 
 body {
-  background:#f6f6f6 !important;
+  background: #f6f6f6 !important;
   font-size: 16px !important;
   line-height: 1.2 !important;
   font-family: "Inter", sans-serif !important;
   /* font-family: "Poppins", sans-serif !important; */
-  
 }
 
 @layer utilities {
@@ -36,110 +35,126 @@ body {
 /**
 Commons
 */
-*, *:focus,.btn,.btn:focus{
-	outline: 0!important;
-	text-decoration: none;
+*,
+*:focus,
+.btn,
+.btn:focus {
+  outline: 0 !important;
+  text-decoration: none;
 }
 
-a, button, input{
-	outline: 0;
-	border: 0;
+a,
+button,
+input {
+  outline: 0;
+  border: 0;
 }
-a, a:hover, a:focus, button:hover, button:focus{
-	text-decoration: none;
-	outline: 0;
+a,
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+  text-decoration: none;
+  outline: 0;
 }
-.clearfix::after{
-    content:'';
+.clearfix::after {
+    content: "";
     clear: both;
-    display: table;
-  }
-  p{
-    line-height: 1.2;
-    margin-bottom: 15px;
-  }
-  a{
-    color: #E63312;
-    text-decoration: underline;
-  }
-  a:hover{
-    text-decoration: none;
-    color: #7D8D98;
-  }
-  strong,b{
-    font-weight: 700;
-  }
-  em,i{
-    font-style: italic;
-  }
-  u{
-    text-decoration: underline;
-  }
-  input[type=text],
-  input[type=email],
-  input[type=tel],
-  textarea{   
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      outline: none;    
-  }
-  ::selection {
-    color: #fff;
-    background: #512C36;
-  }
+  display: table;
+}
+p {
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+a {
+  color: #e63312;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+  color: #7d8d98;
+}
+strong,
+b {
+  font-weight: 700;
+}
+em,
+i {
+  font-style: italic;
+}
+u {
+  text-decoration: underline;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+::selection {
+  color: #fff;
+  background: #512c36;
+}
 .reset-list,
-.ulc{
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.ulc {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.first:first-child{
-	padding-left: 0;
-	margin-left: 0;
+.first:first-child {
+  padding-left: 0;
+  margin-left: 0;
 }
-.last:last-child{
-	padding-right: 0;
-	margin-right: 0;
+.last:last-child {
+  padding-right: 0;
+  margin-right: 0;
 }
-img{
-	max-width: 100%;
-	height: auto;
-	border-radius: 0;
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
 }
-.container{
+.container {
   width: 100% !important;
   max-width: 100% !important;
 }
-.prdLR30{
+.prdLR30 {
   padding: 0 30px;
 }
 
 /**
 All heading
 */
-h1,h2,h3,h4,h5,h6{
-	line-height: 1.2 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2 !important;
   font-weight: 700 !important;
   font-family: "Inter", sans-serif !important;
   /* font-family: "Poppins", sans-serif !important; */
   color: #260944;
 }
-h1{
-	font-size: 56px !important;
+h1 {
+  font-size: 56px !important;
 }
-h2{  
-	font-size: 48px !important;
+h2 {
+  font-size: 48px !important;
 }
-h3{
-	font-size: 40px !important;
+h3 {
+  font-size: 40px !important;
 }
-h4{
-	font-size: 36px !important;
+h4 {
+  font-size: 36px !important;
 }
-h5{
-	font-size: 24px !important;
+h5 {
+  font-size: 24px !important;
 }
 
 /*
@@ -147,19 +162,17 @@ h5{
  Main Layout
 --------------------- 
 */
-.main-layout{
-  margin-left:280px;
+.main-layout {
+  margin-left: 280px;
   height: 100vh;
 }
-
-
 
 /*
 ---------------------
  Left Sidebar Css
 --------------------- 
 */
-.left_sidebar{
+.left_sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -172,11 +185,11 @@ h5{
 .logo {
   text-align: center;
   padding: 60px 20px 0;
-  background: #09084A;
+  background: #09084a;
   position: relative;
   z-index: 999999;
 }
-.logo a{
+.logo a {
   display: inline-block;
   vertical-align: baseline;
   text-decoration: none;
@@ -194,7 +207,6 @@ h5{
   padding-bottom: 30px;
   padding-top: 25px;
 }
-
 
 /*
 ---------------------
@@ -231,7 +243,7 @@ New Sidebar Menu
   padding: 18px 30px 18px 50px;
   position: relative;
 }
-.navbarMenu ul li ul{
+.navbarMenu ul li ul {
   padding-left: 0;
 }
 .navbarMenu ul li ul li a {
@@ -251,7 +263,7 @@ New Sidebar Menu
   top: 18px;
   font-size: 20px;
 }
-.create__deal a span i{
+.create__deal a span i {
   top: 15px !important;
 }
 .create__deal ul li a {
@@ -260,12 +272,12 @@ New Sidebar Menu
   color: #aba7a7 !important;
 }
 .navbarMenu ul li a.active,
-.navbarMenu ul li a:hover{
+.navbarMenu ul li a:hover {
   background: #fff;
   color: #000 !important;
 }
 .navbarMenu ul li a.active i,
-.navbarMenu ul li a:hover i{
+.navbarMenu ul li a:hover i {
   color: #000;
 }
 
@@ -274,7 +286,7 @@ New Sidebar Menu
  Avotor
 ---------------
 */
-.avator{
+.avator {
   padding-left: 30px;
 }
 .avator button.dropdown-toggle {
@@ -286,35 +298,35 @@ New Sidebar Menu
   justify-content: space-between;
   align-items: center;
 }
-.avator button.dropdown-toggle strong{
+.avator button.dropdown-toggle strong {
   display: inline-block;
   vertical-align: baseline;
   font-size: 20px;
   line-height: 1;
-  color:#260944;
+  color: #260944;
   padding-left: 10px;
   font-weight: 600;
 }
-.avator button.dropdown-toggle strong i{
+.avator button.dropdown-toggle strong i {
   padding-left: 20px;
 }
-.dropdown-toggle::after{
+.dropdown-toggle::after {
   content: none !important;
 }
-.avator img{
+.avator img {
   width: 55px;
   height: 55px;
   /* border:5px solid#fff; */
   border-radius: 40px;
 }
-.avator .dropdown-menu a{
+.avator .dropdown-menu a {
   padding-left: 30px;
 }
 .avator .dropdown-menu a i {
   padding-top: 2px;
   position: absolute;
   left: 10px;
-  color: #1C3496;
+  color: #1c3496;
 }
 
 /*
@@ -322,7 +334,7 @@ New Sidebar Menu
  breadcrumb Css
 ------------------ 
 */
-.breadcrumb__wrap{
+.breadcrumb__wrap {
   padding: 20px 0;
 }
 .breadcrumb__wrap ul li {
@@ -333,10 +345,10 @@ New Sidebar Menu
   padding: 0 2px;
   position: relative;
 }
-.breadcrumb__wrap ul li:last-child{
+.breadcrumb__wrap ul li:last-child {
   font-weight: 600;
 }
-.breadcrumb__wrap h5{
+.breadcrumb__wrap h5 {
   color: #260944 !important;
   margin: 20px 0 0;
 }
@@ -346,21 +358,21 @@ New Sidebar Menu
  Common Input Css
 ------------------
 */
-.money__deal__form__radio > ul{
+.money__deal__form__radio > ul {
   margin: 0 -20px;
 }
-.money__deal__form__radio > ul > li{
+.money__deal__form__radio > ul > li {
   width: 50%;
   float: left;
   padding: 0 20px;
 }
-.book__type > ul > li{
+.book__type > ul > li {
   padding-bottom: 25px;
   display: inline-block;
   vertical-align: baseline;
   width: 100%;
 }
-.money__deal__form__wrap > ul{
+.money__deal__form__wrap > ul {
   margin: 0 -20px;
 }
 .money__deal__form__wrap > ul > li {
@@ -368,59 +380,69 @@ New Sidebar Menu
   float: left;
   padding: 0 20px 25px;
 }
-.money__deal__form__wrap > ul > li:nth-child(17){
+.money__deal__form__wrap > ul > li:nth-child(17) {
   clear: left;
 }
-.book__type > ul > li > label{
+.book__type > ul > li > label {
   width: 30%;
   float: left;
 }
-.book__type__fld{
+.book__type__fld {
   width: 70%;
   float: left;
 }
 .label__text > label,
-.book__type > ul > li > label{
+.book__type > ul > li > label {
   font-size: 16px;
   line-height: 1;
-  color: #5B5B98;
+  color: #5b5b98;
   padding-top: 15px;
 }
 
 .input__field textarea,
 .select__field select,
-.input__field input{
+.input__field input {
   width: 100% !important;
   height: 50px;
   border: 1px solid#E8E6F8;
   font-size: 15px !important;
   line-height: 1 !important;
-  color: #5B5B98;
-  opacity: 1;
+  color: #5b5b98 !important;
+  opacity: 1 !important;
   border-radius: 5px;
   padding: 10px 15px;
 }
-.input__field textarea{
+.input__field textarea {
   height: 80px;
 }
 .input__field textarea:focus,
-input:focus{
-  border-color: #12A8EF;
+input:focus {
+  border-color: #12a8ef;
 }
-.select__field select.form-select{
-  background-image:url(../public/images/angle-icon.png);
+/*
+-------------------
+ Placeholder Css
+-------------------
+*/
+textarea::placeholder,
+input::placeholder {
+  color: #5b5b98;
+}
+
+.select__field select.form-select {
+  background-image: url(../public/images/angle-icon.png);
   background-size: 15px 8px;
 }
-.form-select:focus{
+.form-select:focus {
   box-shadow: none !important;
 }
-.file__upload__field{
+.file__upload__field {
   position: relative;
 }
-.file__upload__field input{
+.file__upload__field input {
   display: none;
 }
-.file__upload__field label{
+.file__upload__field label {
   width: 100% !important;
   height: 50px;
   background: #fff;
@@ -428,16 +450,16 @@ input:focus{
   border: 1px solid#E8E6F8;
   font-size: 15px !important;
   line-height: 1 !important;
-  color: #5B5B98;
+  color: #5b5b98;
   opacity: 1;
   border-radius: 5px;
   padding: 15px 15px;
 }
 .file__upload__field span::before,
-.file__upload__field span::after{
-  content: '';
+.file__upload__field span::after {
+  content: "";
   position: absolute;
-  right:50px;
+  right: 50px;
   top: 10px;
   width: 24px;
   height: 28px;
@@ -445,24 +467,24 @@ input:focus{
   background-repeat: no-repeat;
   background-size: 24px 28px;
 }
-.file__upload__field span::before{
+.file__upload__field span::before {
   background: url(../public/images/xcel-icon.png);
   right: 15px;
 }
-.submit__btn button{
+.submit__btn button {
   font-size: 16px;
   line-height: 1;
   font-weight: 400;
   color: #fff;
-  background: #12A8EF;
+  background: #12a8ef;
   padding: 15px 20px;
   border-radius: 5px;
   border: 2px solid#12A8EF;
 }
-.submit__btn button:hover{
+.submit__btn button:hover {
   background: transparent;
-  color: #12A8EF;
-  border-color:#12A8EF;
+  color: #12a8ef;
+  border-color: #12a8ef;
 }
 
 /* 
@@ -470,7 +492,7 @@ input:focus{
   Radio Button
 --------------------- 
 */
-.form__check__wrap{
+.form__check__wrap {
   padding-bottom: 30px;
 }
 .form-check {
@@ -485,25 +507,25 @@ input:focus{
 .form-check label {
   font-size: 16px;
   line-height: 1;
-  color: #5B5B98;
+  color: #5b5b98;
   padding: 4px 10px 0;
 }
 .form-check-input {
   width: 25px !important;
   height: 25px !important;
   --bs-form-check-bg: transparent !important;
-  border: 1px solid #605DEC !important;
+  border: 1px solid #605dec !important;
 }
 .form-check-input:checked {
   background-color: transparent !important;
-  border-color: #605DEC;
+  border-color: #605dec;
 }
-.form-check-input:checked[type=radio] {
+.form-check-input:checked[type="radio"] {
   --bs-form-check-bg-image: url(../public/images/radio-icon.png) !important;
   background-size: 12px 12px !important;
 }
 .form-check-input:focus {
-  border-color: #605DEC;
+  border-color: #605dec;
   outline: 0;
   box-shadow: none !important;
 }
@@ -513,7 +535,7 @@ input:focus{
  Tabs Css
 --------------
 */
-.tabsWarp{
+.tabsWarp {
   padding-top: 30px;
 }
 .tabsWarp > ul {
@@ -521,7 +543,7 @@ input:focus{
   background: #fff;
   margin-bottom: 0 !important;
 }
-.tabsWarp > ul > li{
+.tabsWarp > ul > li {
   width: 33.3333%;
 }
 .tabsWarp > ul > li button {
@@ -530,18 +552,18 @@ input:focus{
   border: none !important;
   font-size: 20px;
   line-height: 1;
-  color: #5B5B98;
+  color: #5b5b98;
   font-weight: 500;
   padding: 20px 20px;
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-  background: #12A8EF !important;
+  background: #12a8ef !important;
   border-radius: 0 !important;
   color: #fff !important;
 }
-.tab-content{
-  background:#e6f1f6;
+.tab-content {
+  background: #e6f1f6;
   padding: 20px 20px;
 }
 
@@ -550,23 +572,23 @@ input:focus{
 money-market-blotter
 ----------------------- 
 */
-.money__market__blotter__grid ul{
+.money__market__blotter__grid ul {
   margin: 0 -10px;
 }
-.money__market__blotter__grid ul li{
+.money__market__blotter__grid ul li {
   float: left;
   width: 29%;
   padding: 0 10px;
 }
-.money__market__blotter__grid ul li:last-child{
+.money__market__blotter__grid ul li:last-child {
   width: 42%;
 }
-.fx__blotter__wrap ul li{
+.fx__blotter__wrap ul li {
   float: left;
   width: 29%;
   padding: 0 10px;
 }
-.fx__blotter__wrap ul li:nth-child(2){
+.fx__blotter__wrap ul li:nth-child(2) {
   width: 42%;
 }
 /*
@@ -574,11 +596,11 @@ money-market-blotter
  Common Input & Refresh Btn 
 -----------------------------
 */
-.input__refresh__btn{
+.input__refresh__btn {
   text-align: center;
   padding-top: 10px;
 }
-.input__refresh__btn button{
+.input__refresh__btn button {
   font-size: 16px;
   line-height: 1;
   color: #fff;
@@ -587,8 +609,8 @@ money-market-blotter
   border-radius: 8px;
   margin: 0 5px;
 }
-.input__refresh__btn button:last-child{
-  background:#F2994A;
+.input__refresh__btn button:last-child {
+  background: #f2994a;
 }
 
 /*
@@ -596,14 +618,14 @@ money-market-blotter
  Dashboard Css
 ----------------------
 */
-.dashboard__Table__grid{
+.dashboard__Table__grid {
   background: #fff;
   border-radius: 8px;
   padding-bottom: 2px;
   margin-bottom: 30px;
 }
-.dashboard__Table__grid h5{
-  margin:0;
+.dashboard__Table__grid h5 {
+  margin: 0;
   padding: 15px 0 5px 25px;
   color: #260944;
 }
@@ -613,25 +635,25 @@ money-market-blotter
  Plus Btn
 --------------- 
 */
-.add__btn button{
+.add__btn button {
   font-size: 16px;
   line-height: 1;
   color: #fff;
   border: 2px solid#12A8EF;
   border-radius: 8px;
-  background: #12A8EF;
+  background: #12a8ef;
   padding: 13px 15px;
   float: right;
 }
-.add__btn button i{
+.add__btn button i {
   display: inline-block;
   vertical-align: baseline;
   padding-right: 10px;
   font-size: 20px;
 }
-.add__btn button:hover{
+.add__btn button:hover {
   background: transparent;
-  color:#12A8EF;
+  color: #12a8ef;
 }
 
 /*
@@ -639,33 +661,33 @@ money-market-blotter
 messaging__history__date
 ----------------------- 
 */
-.messaging__history__date ul{
+.messaging__history__date ul {
   float: right;
   margin: 0 -10px 20px !important;
 }
-.messaging__history__date ul li{
+.messaging__history__date ul li {
   float: left;
   padding: 0 10px !important;
 }
 .select__field__dwn select,
-.select__field__date select{
+.select__field__date select {
   width: 220px !important;
   border-radius: 8px;
 }
-.form-select{
+.form-select {
   width: 200px !important;
 }
-.select__field__action select{
+.select__field__action select {
   width: 260px !important;
 }
-.select__field__dwn{
+.select__field__dwn {
   position: relative;
 }
-.select__field__dwn select{
+.select__field__dwn select {
   width: 180px !important;
   border-radius: 8px;
-  background-color: #2F80ED;
-  border-color:#2F80ED;
+  background-color: #2f80ed;
+  border-color: #2f80ed;
   color: #fff;
   padding-left: 50px;
   background-image: url(../public/images/angle-icon1.png) !important;
@@ -684,7 +706,7 @@ messaging__history__date
 ----------------------
 */
 .edit__profile__wrap,
-.change__password__wrap{
+.change__password__wrap {
   background: #fff;
   padding: 30px 100px 30px 30px;
   border-radius: 8px;
@@ -692,7 +714,7 @@ messaging__history__date
   width: 100%;
   box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%);
 }
-.edit__profile__wrap{
+.edit__profile__wrap {
   max-width: 100%;
 }
 .edit__profile__wrap .book__type ul li label,
@@ -704,25 +726,25 @@ messaging__history__date
 .change__password__wrap .book__type__fld {
   width: 65%;
 }
-.profile__img{
+.profile__img {
   float: left;
 }
 .edit__profile__wrap h5,
-.change__password__wrap h5{
+.change__password__wrap h5 {
   margin-bottom: 30px;
   color: #260944;
 }
-.change__password__btn button{
+.change__password__btn button {
   font-size: 16px;
   line-height: 1;
   color: #fff;
   padding: 15px 20px;
   border-radius: 8px;
-  background: #12A8EF;
+  background: #12a8ef;
   margin-right: 15px;
 }
-.change__password__btn button:nth-child(2){
-  background: #F2994A;
+.change__password__btn button:nth-child(2) {
+  background: #f2994a;
 }
 
 /*
@@ -730,13 +752,13 @@ messaging__history__date
  Login Css
 ------------------- 
 */
-.login__sec__wrap{
+.login__sec__wrap {
   padding: 0 !important;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.login__lft{
+.login__lft {
   width: 50%;
   float: left;
   height: 100vh;
@@ -744,7 +766,7 @@ messaging__history__date
   background-repeat: no-repeat;
   background-size: cover;
 }
-.login__lft img{
+.login__lft img {
   padding-left: 40px;
   padding-top: 40px;
 }
@@ -758,28 +780,28 @@ messaging__history__date
   justify-content: left;
   align-items: center;
 }
-.login__innr{
+.login__innr {
   max-width: 500px;
   width: 100%;
 }
-.login__dsc{
+.login__dsc {
   padding-bottom: 30px;
 }
-.login__dsc p{
+.login__dsc p {
   margin-bottom: 0;
 }
-.login__input{
+.login__input {
   margin-bottom: 20px;
   position: relative;
 }
-.login__input label{
+.login__input label {
   display: block;
   font-size: 16px;
   line-height: 1;
   color: #666666;
   padding-bottom: 15px;
 }
-.login__input input{
+.login__input input {
   width: 100%;
   height: 55px;
   border: 1px solid#c9c9c9;
@@ -789,8 +811,8 @@ messaging__history__date
   padding: 10px 20px;
   border-radius: 12px;
 }
-.login__input input:focus{
-  border-color: #12A8EF;
+.login__input input:focus {
+  border-color: #12a8ef;
 }
 .login__input i {
   position: absolute;
@@ -799,14 +821,14 @@ messaging__history__date
   font-size: 20px;
   line-height: 1;
 }
-.login__input span{
+.login__input span {
   display: inline-block;
   vertical-align: baseline;
   font-size: 14px;
   line-height: 1;
   padding-top: 5px;
 }
-.login__input__btn button{
+.login__input__btn button {
   width: 250px;
   height: 60px;
   background: #161803;
@@ -818,12 +840,12 @@ messaging__history__date
   margin-bottom: 10px;
 }
 .inputtype-checkbox label a,
-.login__input__btn p a{
+.login__input__btn p a {
   color: #000;
 }
 .inputtype-checkbox label a:hover,
-.login__input__btn p a:hover{
-  color: #12A8EF;
+.login__input__btn p a:hover {
+  color: #12a8ef;
 }
 
 /*
@@ -839,14 +861,14 @@ messaging__history__date
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
-  color:#83898C;
+  color: #83898c;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   line-height: 22px;
   text-transform: capitalize;
-  margin:30px 0;
+  margin: 30px 0;
 }
 
 /* Hide the browser's default checkbox */
@@ -859,7 +881,7 @@ messaging__history__date
 }
 
 /* Create a custom checkbox */
-.inputtype-checkbox .checkmark{
+.inputtype-checkbox .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -879,24 +901,24 @@ background-color: #D34E8E;
   background-color: #111111;
   border: 2px solid #111111;
 }
-.login__captcha .inputtype-checkbox .checkmark{
-  border: 2px solid #34A853;
+.login__captcha .inputtype-checkbox .checkmark {
+  border: 2px solid #34a853;
 }
 .login__captcha .inputtype-checkbox .container input:checked ~ .checkmark {
-  background-color: #34A853;
-  border: 2px solid #34A853;
+  background-color: #34a853;
+  border: 2px solid #34a853;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .inputtype-checkbox .checkmark:after {
-content: "";
-position: absolute;
-display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 /* Show the checkmark when checked */
 .inputtype-checkbox .container input:checked ~ .checkmark:after {
-display: block;
+  display: block;
 }
 
 /* Style the checkmark/indicator */
@@ -911,10 +933,10 @@ display: block;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.inputtype-checkbox .container:hover .checkmark:after{
+.inputtype-checkbox .container:hover .checkmark:after {
   border-color: #fff !important;
 }
-.login__captcha{
+.login__captcha {
   padding-bottom: 30px;
 }
 .login__captcha button {
@@ -926,7 +948,7 @@ display: block;
   justify-content: space-between;
   align-items: center;
 }
-.login__captcha .container{
+.login__captcha .container {
   text-align: left;
   margin: 0;
 }
@@ -936,20 +958,20 @@ display: block;
  All Deals Page
 --------------------- 
 */
-.all__deals__tabs ul{
+.all__deals__tabs ul {
   border-bottom: 0;
   margin: 0 -8px;
 }
-.all__deals__tabs > ul > li{
+.all__deals__tabs > ul > li {
   padding: 0 8px;
 }
-.all__deals__tabs > ul > li button{
-  background: #E1E1E1;
+.all__deals__tabs > ul > li button {
+  background: #e1e1e1;
   color: #000;
   border-radius: 0 !important;
 }
-.all__deals__tabs > ul > li button:hover{
-  background: #12A8EF;
+.all__deals__tabs > ul > li button:hover {
+  background: #12a8ef;
   color: #fff;
 }
 .all__deals__tabs .tab-content {
@@ -961,12 +983,12 @@ display: block;
 ---------------------
 --------------------- 
 */
-.reverse__repo__table{
+.reverse__repo__table {
   background: #fff;
   border-radius: 10px;
   padding: 25px 0 20px;
 }
-.reverse__repo__table h5{
+.reverse__repo__table h5 {
   font-size: 18px !important;
   line-height: 1 !important;
   padding-left: 25px;
@@ -978,30 +1000,29 @@ display: block;
 daily__dealer__limit__table
 ---------------------------- 
 */
-.daily__dealer__limit__table table{
+.daily__dealer__limit__table table {
   margin-bottom: 0;
 }
-.daily__dealer__limit__table table thead tr th{
+.daily__dealer__limit__table table thead tr th {
   border: none;
   font-weight: 500;
   padding: 15px 15px;
 }
-.daily__dealer__limit__table table tbody tr td{
-  background:#f6f6f6;
+.daily__dealer__limit__table table tbody tr td {
+  background: #f6f6f6;
   padding: 15px 15px;
   color: #5b5b98;
 }
-
 
 /*
 ------------------------
 average__lending__table
 ------------------------ 
 */
-.average__lending__table{
+.average__lending__table {
   padding-bottom: 40px;
 }
-.average__lending__table table thead tr th{
+.average__lending__table table thead tr th {
   padding: 20px 10px;
   border: none;
   text-align: center;
@@ -1012,12 +1033,12 @@ average__lending__table
   float: left;
   text-align: center;
 }
-.table-colum tbody tr td{
+.table-colum tbody tr td {
   background: transparent;
   text-align: center;
   font-size: 14px;
   line-height: 1;
-  color: #5B5B98;
+  color: #5b5b98;
   padding: 15px 10px;
 }
 
@@ -1029,31 +1050,31 @@ average__lending__table
   background: transparent;
   padding: 0;
 }
-.import__payment__table ul li{
+.import__payment__table ul li {
   border-radius: 0;
 }
 .import__payment__table ul li button {
-  background: #E1E1E1;
+  background: #e1e1e1;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
   color: #260944;
   padding: 15px 20px;
   border-right: 1px solid#260944 !important;
 }
-.import__payment__table ul li:last-child button{
+.import__payment__table ul li:last-child button {
   border-right: none !important;
 }
-.import__payment__table ul li button:hover{
-  background: #12A8EF;
+.import__payment__table ul li button:hover {
+  background: #12a8ef;
   color: #fff;
-} 
+}
 .import__payment__table .nav-tabs {
   --bs-nav-tabs-border-width: 0 !important;
   --bs-nav-tabs-border-color: 0 !important;
   --bs-nav-tabs-border-radius: 0 !important;
   border-bottom: 0 !important;
 }
-.all__holiday__wrap ul li{
+.all__holiday__wrap ul li {
   width: 25%;
   float: left;
   padding: 0 15px 20px;
@@ -1065,29 +1086,29 @@ single__deal__details
 ---------------------  
 */
 .single__deal__details {
-  background: #EEEEEE;
+  background: #eeeeee;
   padding: 20px 20px;
   margin: 0 -20px;
   margin-bottom: 20px;
 }
-.single__deal__details h5{
+.single__deal__details h5 {
   margin-bottom: 20px;
-  color:#260944;
+  color: #260944;
 }
-.deal__dtls__btn{
+.deal__dtls__btn {
   text-align: center;
   padding-bottom: 30px;
 }
-.deal__dtls__btn button{
+.deal__dtls__btn button {
   font-size: 16px;
   line-height: 1;
   color: #fff;
-  background: #27AE60;
+  background: #27ae60;
   padding: 10px 20px;
   margin: 0 10px;
 }
-.deal__dtls__btn button:last-child{
-  background:#EB5757;
+.deal__dtls__btn button:last-child {
+  background: #eb5757;
 }
 
 .react-datepicker-wrapper {
@@ -1097,12 +1118,96 @@ single__deal__details
 }
 
 .money__market__modal .modal-dialog {
-    top: 50%;
-    transform: translateY(-50%) !important;
-    -ms-transform: translateY(-50%) !important;
-    -webkit-transform: translateY(-50%) !important;
+  top: 50%;
+  transform: translateY(-50%) !important;
+  -ms-transform: translateY(-50%) !important;
+  -webkit-transform: translateY(-50%) !important;
 }
 .money__market__modal .modal-header {
   border-bottom: 0;
   padding-bottom: 0;
+}
+
+/*
+---------------------
+ Select Search
+--------------------- 
+*/
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-menu ul li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.custom-menu ul li:hover {
+  background-color: #f8f9fa;
+}
+.custom-select.custom-select-search {
+  display: block !important;
+  position: relative;
+}
+.custom-select-search input {
+  width: 100% !important;
+  height: 50px !important;
+  border: 1px solid #e8e6f8;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  color: #5b5b98 !important;
+  opacity: 1 !important;
+  border-radius: 5px !important;
+  padding: 10px 15px !important;
+}
+.custom-select-search i {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  font-size: 30px;
+  color: #12a8ef;
+}
+
+.custom-select-search input::placeholder {
+  color: #5b5b98;
+  opacity: 1;
+}
+.custom-select-search .custom-menu {
+  border-radius: 0;
+  right: 0;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+.custom-menu ul li{
+  color:#5b5b98;
+}
+.custom-menu input {
+  height: 40px !important;
+  border-radius: 0 !important;
+}
+.custom-menu i {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 26px;
+  color: #12a8ef;
 }

@@ -6,6 +6,9 @@ https://imballinst.github.io/react-bs-datatable/storybook/?path=/story/uncontrol
 Image Upload
 https://codepen.io/beljems/pen/LYNZYNy
 
+Select Search
+npm install react-select2-wrapper
+
 node versition 
 18.17.0
 
