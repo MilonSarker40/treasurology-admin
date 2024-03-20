@@ -519,9 +519,14 @@ const BookType = () => {
                         </div>
                     </li>
                     <li>
-                        <label style={{paddingTop:'0'}}>Instruction</label>
-                        <div className='input__field book__type__fld'>
-                            <textarea placeholder='Put Instruction Here' value={instruction} onChange={handleTextareaChange}></textarea>
+                        <label>Interest Amount</label>
+                        <div className='select__field book__type__fld'>
+                            <select className="form-select" aria-label="Interest Amount" value={interestAmount} onChange={(e) => handleSelectChange(e, setInterestAmount)}>
+                                <option value="0.00">0.00</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
                         </div>
                     </li>
                     <li>
@@ -531,14 +536,9 @@ const BookType = () => {
                         </div>
                     </li>
                     <li>
-                        <label>Interest Amount</label>
-                        <div className='select__field book__type__fld'>
-                            <select className="form-select" aria-label="Interest Amount" value={interestAmount} onChange={(e) => handleSelectChange(e, setInterestAmount)}>
-                                <option value="0.00">0.00</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                        <label style={{paddingTop:'0'}}>Instruction</label>
+                        <div className='input__field book__type__fld'>
+                            <textarea placeholder='Put Instruction Here' value={instruction} onChange={handleTextareaChange}></textarea>
                         </div>
                     </li>
                 </ul>

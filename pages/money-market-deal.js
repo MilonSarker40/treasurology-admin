@@ -11,7 +11,7 @@ const MoneyMarketDeal = () => {
             <BreadCrumb subtitle='Liquidity Module /' subtitle1='Dealing / ' subtitle2='Create Order /' subtitle3='Money Market Deal' title='Money Market Deal'/>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-md-8'>
+                    <div className='col-lg-8 col-md-12'>
                         <BookType />
                     </div>
                     {/* <div className='col-md-5'>

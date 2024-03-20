@@ -1211,3 +1211,19 @@ single__deal__details
   font-size: 26px;
   color: #12a8ef;
 }
+.dashboard__sec__wrap img{
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/*
+------------------
+ Overflow Table
+------------------ 
+*/
+/* .overflow__table{
+  position: relative;
+  overflow-y: scroll;
+  height: 100px;
+} */
