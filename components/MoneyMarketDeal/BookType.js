@@ -334,7 +334,7 @@ const BookType = () => {
                             <label>Book Type</label>
                         </div>
                         <div className={`${Classes.form__check__innr}`}>
-                            {testObj.map((item, index) => (
+                            {/* {testObj.map((item, index) => (
                                 <div className="form-check">
                                     <input
                                         className="form-check-input"
@@ -347,7 +347,7 @@ const BookType = () => {
                                     />
                                     <label className="form-check-label" htmlFor={item.name}>{item.name}</label>
                                 </div>
-                            ))}
+                            ))} */}
                             <div className="form-check">
                                 <input
                                     className="form-check-input"
