@@ -46,7 +46,7 @@ const LoginForm = () => {
     formBody = formBody.join("&");
 
     // Function to handle form submission
-    const handleLogin = () => {
+    const handleLogin = async () => {
         // Check if all required fields are filled and captcha is checked
         if (email && password && agreeTerms && captchaChecked) {
             let userquery = `https://api.treasury.arthik.io/api/Authorization/rsaEncrypt/${email}`
@@ -55,40 +55,38 @@ const LoginForm = () => {
             console.log("userquery : ", userquery);
             console.log("passquery : ", passquery);
 
-            fetch(userquery, {
+            await fetch(userquery, {
                 method: 'GET',
                 headers: {
                     'Access-Control-Allow-Origin': '*'
                 }
               })
                 .then(response => response.text())
-                .then(text => setEncryptedusername(text))
+                .then(text => {
+                    setEncryptedusername(text);
+                })
                 .catch(error => console.error('Error fetching username:', error));
 
-            fetch(passquery, {
+            await fetch(passquery, {
                 method: 'GET',
                 headers: {
                     'Access-Control-Allow-Origin': '*'
                 }
               })
                 .then(response => response.text())
-                .then(text => setEncryptedpassword(text))
+                .then(text => {
+                    setEncryptedpassword(text);
+                })
                 .catch(error => console.error('Error fetching password:', error));
 
             // Make API call
             console.log(`form body : ${formBody}`)
-            fetch('https://api.treasury.arthik.io/api/connect/token', {
+            await fetch('https://api.treasury.arthik.io/api/connect/token', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Access-Control-Allow-Origin':'*',
-                    
                 },
-                // body: JSON.stringify({
-                //     email,
-                //     password,
-                //     subscribeNewsletter,
-                // }),
                 body: formBody,
             })
                 .then(response => response.json())
@@ -103,6 +101,7 @@ const LoginForm = () => {
                     localStorage.setItem("Email", data.Email)
                     localStorage.setItem("FullName", data.FullName)
                     localStorage.setItem("loginState", true)
+
                     location.reload()
                 })
                 .catch(error => {

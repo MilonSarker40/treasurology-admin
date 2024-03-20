@@ -6,6 +6,7 @@ import CounterPartySelect from './CounterPartySelect';
 
 const BookType = () => {
     // State variables to hold field values
+    const [booklist, setBooklist] = useState([]);
     const [currencylist, setCurrencylist] = useState([]);
     const [instrumentList, setInstrumentList] = useState([]);
     const [acceptanceTypeList, setacceptanceTypeList] = useState([]);
@@ -29,8 +30,46 @@ const BookType = () => {
     const [interestAmount, setInterestAmount] = useState('0.00');
 
     const token = localStorage.getItem('access_token');
+    const type = localStorage.getItem("token_type");
+
+    console.log("TOKEN : ", token);
+
+    //Book Type Api Call
+    const [selectedBookType, setSelectedBookType] = useState('DBU');
+    const [list, setList] = useState([]);
+    const url = "https://api.treasury.arthik.io/api/BookType";
+    // const token = localStorage.getItem("access_token");
+    
+    
+    // Function to handle radio button change
+    const handleRadioChange = (e) => {
+        setSelectedBookType(e.target.value);
+    };
 
     useEffect(() => {
+        // BOOKTYPE API
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            },
+            // body: JSON.stringify({
+            //     bookType: selectedBookType,
+            // }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle API response
+            console.log("RADIO BOOKTYPE")
+            console.log(data);
+            setBooklist(data);
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error:', error);
+        });
+
         //Currency Api
         fetch("https://api.treasury.arthik.io/api/Currency", {
             headers: {
@@ -66,6 +105,20 @@ const BookType = () => {
         .catch(error => {
             console.error('Error fetching Instrument:', error);
         });
+
+        // SAVE DATA DIRECTLY
+        // const r1 = [
+        //     {kfe: 1},
+        //     {kfe: 2}
+        // ]
+
+        // SAVE DATA.ARRAY
+        // const r2 = {
+        //     array : [
+        //         {kfe: 1},
+        //         {kfe: 2}
+        //     ]
+        // }
 
         //Acceptance Type
         fetch("https://api.treasury.arthik.io/api/AcceptanceType", {
@@ -210,17 +263,7 @@ const BookType = () => {
         });
     };
 
-    //Book Type Api Call
-    const [selectedBookType, setSelectedBookType] = useState('DBU');
-    const [list, setList] = useState([]);
-    const url = "https://api.treasury.arthik.io/api/BookType";
-    // const token = localStorage.getItem("access_token");
-    const type = localStorage.getItem("token_type");
     
-    // Function to handle radio button change
-    const handleRadioChange = (e) => {
-        setSelectedBookType(e.target.value);
-    };
 
     useEffect(() => {
         fetch(url, {
@@ -270,6 +313,17 @@ const BookType = () => {
         });
     };
 
+    const testObj = [
+        {
+            name: "DBU1",
+            value: "value2"
+        },
+        {
+            name: "T2",
+            value: "t3",
+        }
+    ]
+
     return (
         <div className='book__type__wrap'>
             <div className='money__deal__form__radio'>
@@ -280,6 +334,20 @@ const BookType = () => {
                             <label>Book Type</label>
                         </div>
                         <div className={`${Classes.form__check__innr}`}>
+                            {testObj.map((item, index) => (
+                                <div className="form-check">
+                                    <input
+                                        className="form-check-input"
+                                        type="radio"
+                                        name="bookType"
+                                        id={index}
+                                        value={item.value}
+                                        checked={selectedBookType === `{item.name}`}
+                                        onChange={handleRadioChange}
+                                    />
+                                    <label className="form-check-label" htmlFor={item.name}>{item.name}</label>
+                                </div>
+                            ))}
                             <div className="form-check">
                                 <input
                                     className="form-check-input"
