@@ -395,9 +395,9 @@ const BookType = () => {
             <div className='book__type money__deal__form__wrap'>
                 <ul className='reset-list clearfix'> 
                     <li>
-                        <label>Amount</label>
-                        <div className='input__field book__type__fld'>
-                            <input type='text' placeholder='Amount' value={amount} onChange={(e) => handleInputChange(e, setAmount)} />
+                        <label>CounterParty</label>
+                        <div className='select__field book__type__fld'>
+                            <CounterPartySelect />
                         </div>
                     </li>
                     <li>
@@ -411,9 +411,9 @@ const BookType = () => {
                         </div>
                     </li>
                     <li>
-                        <label>CounterParty</label>
-                        <div className='select__field book__type__fld'>
-                            <CounterPartySelect />
+                        <label>Amount</label>
+                        <div className='input__field book__type__fld'>
+                            <input type='text' placeholder='Amount' value={amount} onChange={(e) => handleInputChange(e, setAmount)} />
                         </div>
                     </li>
                     <li>
